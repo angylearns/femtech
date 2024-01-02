@@ -232,6 +232,7 @@ footer .logosRRSS {
 .instagram:hover {
     background-image: url("../img/rrss/instagram2.svg");
 }
+
 /* end footer .........................................................................................*/
 
 /* Upper menu .........................................................................................*/
@@ -369,9 +370,10 @@ footer .logosRRSS {
     /*cambios para hacer más pequeña la foto*/
     display: grid;
     grid-template-rows: 80% 20%;
-    /*background-color: black;*/
-    width: auto;
+   /* background-color: black;*/
+    width: 100%;
     height: 300px;
+   /* max-width: 700px;*/
     min-width: 256px;
     /*......................................*/
 }
@@ -387,8 +389,9 @@ li {
 ul.slider1,
 ul.slider2 {
     position: relative;
-   /* width: 800px;
-    height: 200px;*//*comentado para los cambios de hacer la foto mas pequeña*/
+    /*width: 800px;*//*comentario para hacer la imagen mas pequeña*/
+    width: 100%;
+    height: 200px;/*comentado para los cambios de hacer la foto mas pequeña*/
 }
 
 /*formato del contenedor de la imagen que se muestra en el slider*/
@@ -402,7 +405,7 @@ ul.slider2 li {
    width: 100%;
     height: 170px;
     transition: opacity .5s;
-
+    text-align: center;
 }
 
 /*formato de la imagen que se muestra en el slider*/
@@ -410,6 +413,9 @@ ul.slider1 li img,
 ul.slider2 li img {
     width: 100%;
     height: 100%;
+    
+    max-width: 800px;
+    
     border-radius: 40px;
     object-fit: cover;
     /*Modifica el tamaño del elemento remplazado para llenar el cuadro de contenido. El objeto completo ocupará todo el espacio de la caja. Si el tamaño del elemento no concuerda con el de su caja, se estirará para llenarlo*/
