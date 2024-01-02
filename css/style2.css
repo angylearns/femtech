@@ -176,10 +176,6 @@ footer {
     background-color: #ffffff;
     border-radius: 50px;
     display: flex;
-   
-    /* flex-direction: column;*//*para vista movil*/
-
-
     justify-content: space-between;
     align-items: center;
     height: 100px;

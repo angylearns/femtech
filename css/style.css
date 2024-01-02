@@ -2,7 +2,7 @@
 
 * {
     font-family: 'Outfit', sans-serif;
-    box-sizing: border-box;
+   /* box-sizing: border-box;*/
     margin: 0;
 }
 
@@ -13,11 +13,29 @@ body {
 }
 
 
-#body2 {
-    padding: 46px 89px 0 89px;
-    height: 140vh;
-    background: radial-gradient(circle at 71% 100%, rgba(247, 183, 135, 1) 11%, rgba(7, 102, 173, 1) 58%, rgba(41, 173, 178, 1) 93%);
+/*damos formato a height para que al agrandar o encoger la ventana y junto con las propiedades body2 nos muestre bien el fondo*/
+html {
+    height: auto;
+    min-height: 100%;
+    
 }
+.body2 {
+    padding: 46px 89px 0 89px;
+  /*  background: radial-gradient(circle at 71% 100%, rgba(247, 183, 135, 1) 11%, rgba(7, 102, 173, 1) 58%, rgba(41, 173, 178, 1) 93%);*/
+
+  background-color: pink;
+    /*con la dos siguientes lineas hacemos el body responsive*/
+    min-height: 100%;
+    height: auto;
+    
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+     /*display: flex;
+    flex-direction: column;*/
+}
+
+
 
 header {
     background-color: #ffffff;
@@ -164,12 +182,13 @@ footer {
     color: #0766AD;
     font-weight: bold;
     /*footer position at the end of the page*/
-    position: relative;
+    position: arelative;
     bottom: 0;
-    margin-bottom: 5px;
+   /* margin-bottom: 5px;*/
     padding-right: 300px;
     padding-left: 100px;
-    width: 100%;
+
+   /* width: 100%;*/
 
 }
 
@@ -189,74 +208,79 @@ footer .logosRRSS {
 .facebook,
 .twitter,
 .instagram {
-    width: 35px;
-    height: 36px;
+    width: 50px;
+    height: 50px;
 }
 
 /*default values*/
 .facebook {
-    background-image: url("../img/facebook.png");
+    background-image: url("../img/rrss/facebook.svg");
 }
 
 .twitter {
-    background-image: url("../img/twitter.png");
+    background-image: url("../img/rrss/twitter.svg");
 }
 
 .instagram {
-    background-image: url("../img/instagram.png");
+    background-image: url("../img/rrss/instagram.svg");
 }
 
 /*footer images hover*/
 .facebook:hover {
-    background-image: url("../img/facebook2.png");
+    background-image: url("../img/rrss/facebook2.svg");
 }
 
 .twitter:hover {
-    background-image: url("../img/twitter2.png");
+    background-image: url("../img/rrss/twitter2.svg");
 }
 
 .instagram:hover {
-    background-image: url("../img/instagram2.png");
+    background-image: url("../img/rrss/instagram2.svg");
 }
 
 
 .mainSectionNosotras,
 .mainSectionNuestraMision,
 .mainSectionNuestrosValores {
-    display: grid;
-    grid-template-columns: 5% 90%;
-    gap: 20px;
-    padding-left: 50px;
+    /*  display: grid;
+    grid-template-columns: 100%;*/
+    /* gap: 20px;*/
+    /* padding-left: 20px;*/
     padding-top: 20px;
-   /* background-color: rgb(41, 97, 219);*/
-}
-
-.contentBox1,
-.contentBox2,
-.contentBox3 {
-    height: 380px;
-    background-color: rgba(255, 255, 255, 0.137);
+    margin-bottom: 20px;
+    /* margin-bottom: 150px;*/
+    /*height: auto;*/
+    /* background-color: rgb(41, 97, 219);*/
+    background-color: rgba(255, 255, 255, 0.212);
     border-radius: 40px;
     display: flex;
     flex-direction: column;
+    width: 100%;
+
+    padding-bottom: 25px;
 }
 
-.contentBox3{
-    margin-bottom: 45px;
+.mainSectionNuestraMision,
+.mainSectionNuestrosValores {
+    display: none;
 }
+
 
 .box1Text p {
     text-align: left;
     padding-top: 10px;
     padding-left: 40px;
-    padding-right: 40px;;
+    padding-right: 40px;
+    margin-left: 40px;
     color: white;
 }
 
 /*Slider: nosotras y mision .........................................................*/
-.container1, .container2, .container3 {
+.container1,
+.container2,
+.container3 {
     margin: auto;
-   /* background-color: transparent;*/
+    /* background-color: transparent;*/
     width: 800px;
     padding-top: 25px;
 }
@@ -269,14 +293,16 @@ li {
     list-style: none;
 }
 
-ul.slider1, ul.slider2 {
+ul.slider1,
+ul.slider2 {
     position: relative;
     width: 800px;
     height: 200px;
 }
 
 /*formato del contenedor de la imagen que se muestra en el slider*/
-ul.slider1 li, ul.slider2 li {
+ul.slider1 li,
+ul.slider2 li {
     position: absolute;
     left: 0px;
     top: 0px;
@@ -288,7 +314,8 @@ ul.slider1 li, ul.slider2 li {
 }
 
 /*formato de la imagen que se muestra en el slider*/
-ul.slider1 li img , ul.slider2 li img{
+ul.slider1 li img,
+ul.slider2 li img {
     width: 100%;
     height: 100%;
     border-radius: 40px;
@@ -296,27 +323,32 @@ ul.slider1 li img , ul.slider2 li img{
     /*Modifica el tamaño del elemento remplazado para llenar el cuadro de contenido. El objeto completo ocupará todo el espacio de la caja. Si el tamaño del elemento no concuerda con el de su caja, se estirará para llenarlo*/
 }
 
-ul.slider1 li:first-child, ul.slider2 li:first-child  {
+ul.slider1 li:first-child,
+ul.slider2 li:first-child {
     opacity: 1;
     /*Mostramos el primer <li>*/
 }
 
-ul.slider1 li:target, ul.slider2 li:target {
+ul.slider1 li:target,
+ul.slider2 li:target {
     opacity: 1;
     /*Mostramos el <li> del enlace que pulsemos*/
 }
 
-.menu1, .menu2 {
+.menu1,
+.menu2 {
     text-align: center;
     margin: 5px;
 }
 
-.menu1 li, .menu2 li{
+.menu1 li,
+.menu2 li {
     display: inline-block;
     text-align: center;
 }
 
-.menu1 li a, .menu2 li a {
+.menu1 li a,
+.menu2 li a {
     display: inline-block;
     color: white;
     text-decoration: none;
@@ -328,7 +360,8 @@ ul.slider1 li:target, ul.slider2 li:target {
     border-radius: 100%;
 }
 
-.menu1 li a:hover, .menu2 li a:hover{
+.menu1 li a:hover,
+.menu2 li a:hover {
     background-color: #F7B787;
 }
 
@@ -341,15 +374,15 @@ ul.slider1 li:target, ul.slider2 li:target {
     margin: 5px;
 }*/
 
-.menuLateral li{
+.menuLateral li {
     display: flex;
     text-align: center;
     padding: 20px;
 }
 
 .menuLateral li a.enabled {
-    display:flex;
-    flex-direction:row;
+    display: flex;
+    flex-direction: row;
     background-color: #8CECD7;
     padding: 15px;
     width: 20px;
@@ -362,12 +395,12 @@ ul.slider1 li:target, ul.slider2 li:target {
     background-color: #F7B787;
 }
 
-.disabled{
-    pointer-events: none; 
+.disabled {
+    pointer-events: none;
     cursor: default;
     background-color: #e1dde2;
-    display:flex;
-    flex-direction:row;
+    display: flex;
+    flex-direction: row;
     padding: 15px;
     width: 20px;
     height: 20px;
@@ -400,8 +433,9 @@ ul.slider3 li {
     width: inherit;
     height: 170px;
     transition: opacity .5s;
-    color: rgba(0, 0, 0, 0);/*texto transparente*/
-   /* background-color: red;*/
+    color: rgba(0, 0, 0, 0);
+    /*texto transparente*/
+    /* background-color: red;*/
 }
 
 /*formato de la imagen que se muestra en el slider*/
@@ -409,7 +443,7 @@ ul.slider3 li img {
     width: 100%;
     height: 170px;
     border-radius: 40px;
-    object-fit: cover;   
+    object-fit: cover;
 }
 
 ul.slider3 li:first-child {
@@ -450,19 +484,120 @@ ul.slider3 li:target p {
     border-radius: 100%;
 }
 
-.menu3 li a:hover{
+.menu3 li a:hover {
     background-color: #F7B787;
 }
 
-#tituloApartados{
-    color:white;
+#tituloApartados {
+    color: white;
     text-align: center;
 }
 
-.box3Text{
+.box3Text {
     font-size: 20px;
 }
 
 /*  .................................................*/
 
 /* fin cambios de María ............................................................*/
+
+/* prueba texto oculto.......................*/
+/*.oculto{
+    display: none;
+}
+
+.leerMas:hover ~ .box1Text p
+{
+    display: none;
+
+    
+}
+.leerMas:hover ~ .box1Text .oculto{
+    display: block;
+}
+
+...........................................*/
+
+/*#radio1, #radio2, #radio3{
+    visibility: hidden;
+}*/
+
+/* Estilo básico para el enlace y el radio button que se vean como un botón*/
+#enlace1,
+#enlace2,
+#enlace3 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 15px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+/* Estilos adicionales cuando el radio button está seleccionado o hacemos hover sobre el*/
+#radio1:checked+#enlace1 {
+    background-color: #F7B787;
+}
+
+#enlace1:hover {
+    background-color: #8CECD7;
+}
+
+#radio2:checked+#enlace2 {
+    background-color: #F7B787;
+}
+
+#enlace2:hover {
+    background-color: #8CECD7;
+}
+
+#radio3:checked+#enlace3 {
+    background-color: #F7B787;
+}
+
+#enlace3:hover {
+    background-color: #8CECD7;
+}
+
+/*según pinchamos en uno y otro boton = enlace + radiobutton, muestra u oculta una sección de la página*/
+/*ver seccion sobre Nosotras y ocultar el resto*/
+#radio1:checked~.mainSectionNosotras {
+    display: block;
+}
+
+#radio1:checked~.mainSectionNuestraMision {
+    display: none;
+}
+
+#radio1:checked~.mainSectionNuestrosValores {
+    display: none;
+}
+
+/*ver seccion Nuestra misión y ocultar el resto*/
+#radio2:checked~.mainSectionNuestraMision {
+    display: block;
+}
+
+#radio2:checked~.mainSectionNosotras {
+    display: none;
+}
+
+#radio2:checked~.mainSectionNuestrosValores {
+    display: none;
+}
+
+/*ver seccion Nuestros valores y ocultar el resto*/
+#radio3:checked~.mainSectionNuestrosValores {
+    display: block;
+}
+
+#radio3:checked~.mainSectionNosotras {
+    display: none;
+}
+
+#radio3:checked~.mainSectionNuestraMision {
+    display: none;
+}
