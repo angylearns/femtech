@@ -175,26 +175,27 @@ main .items .item {
 footer {
     background-color: #ffffff;
     border-radius: 50px;
-    display: flex;
-    justify-content: space-between;
+    display:flex;
+  /*  justify-content: space-between;*/
+    
     align-items: center;
     height: 100px;
     color: #0766AD;
     font-weight: bold;
     /*footer position at the end of the page*/
-    position: arelative;
+    position: relative;
     bottom: 0;
    /* margin-bottom: 5px;*/
     padding-right: 300px;
-    padding-left: 100px;
+   /* padding-left: 100px;*/
 
-   /* width: 100%;*/
+    /*width: 100%;*/
 
 }
 
 footer .copyright {
-    width: 15%;
-    margin-left: 0px;
+    width: 75%;
+    margin-left: 25px;
 }
 
 footer .logosRRSS {
@@ -202,6 +203,7 @@ footer .logosRRSS {
     justify-content: space-between;
     text-align: left;
     gap: 10px;
+    margin-left: 100px;
 }
 
 /*set icons measure*/
