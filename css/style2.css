@@ -170,14 +170,12 @@ main .items .item {
     letter-spacing: 1.6px;
 }
 
-/* comentario temporal: cambios de María ...........................................*/
+/* Footer .....................................................................................*/
 
 footer {
     background-color: #ffffff;
     border-radius: 50px;
     display:flex;
-  /*  justify-content: space-between;*/
-    
     align-items: center;
     height: 100px;
     color: #0766AD;
@@ -185,12 +183,7 @@ footer {
     /*footer position at the end of the page*/
     position: relative;
     bottom: 0;
-   /* margin-bottom: 5px;*/
     padding-right: 300px;
-   /* padding-left: 100px;*/
-
-    /*width: 100%;*/
-
 }
 
 footer .copyright {
@@ -239,7 +232,94 @@ footer .logosRRSS {
 .instagram:hover {
     background-image: url("../img/rrss/instagram2.svg");
 }
+/* end footer .........................................................................................*/
 
+/* Upper menu .........................................................................................*/
+.menuSuperior{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* basic style in order to set the apparence of button*/
+#enlace1,
+#enlace2,
+#enlace3 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 15px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+/* button 1 active*/
+#radio1:checked ~ .menuSuperior>#enlace1 {
+    background-color: #F7B787;
+}
+/* button 1 hover*/
+#enlace1:hover {
+    background-color: #8CECD7;
+}
+/* button 2 active*/
+#radio2:checked~.menuSuperior>#enlace2 {
+    background-color: #F7B787;
+}
+/* button 2 hover*/
+#enlace2:hover {
+    background-color: #8CECD7;
+}
+/* button 3 active*/
+#radio3:checked~.menuSuperior>#enlace3 {
+    background-color: #F7B787;
+}
+/* button 3 hover*/
+#enlace3:hover {
+    background-color: #8CECD7;
+}
+
+/*As we click on each button=link+radiobutton, it shows or hides a section of the page*/
+/*SEE section "Nosotras" and hide the rest*/
+#radio1:checked~.mainSectionNosotras {
+    display: block;
+}
+/*hide section*/
+#radio1:checked~.mainSectionNuestraMision {
+    display: none;
+}
+/*hide section*/
+#radio1:checked~.mainSectionNuestrosValores {
+    display: none;
+}
+/*SEE section "Mision" and hide the rest*/
+#radio2:checked~.mainSectionNuestraMision {
+    display: block;
+}
+/*hide section*/
+#radio2:checked~.mainSectionNosotras {
+    display: none;
+}
+/*hide section*/
+#radio2:checked~.mainSectionNuestrosValores {
+    display: none;
+}
+/*SEE section "Valores" and hide the rest*/
+#radio3:checked~.mainSectionNuestrosValores {
+    display: block;
+}
+/*hide section*/
+#radio3:checked~.mainSectionNosotras {
+    display: none;
+}
+/*hide section*/
+#radio3:checked~.mainSectionNuestraMision {
+    display: none;
+}
+
+/* end Upper menu .........................................................................................*/
 
 .mainSectionNosotras,
 .mainSectionNuestraMision,
@@ -523,83 +603,3 @@ ul.slider3 li:target p {
 /*#radio1, #radio2, #radio3{
     visibility: hidden;
 }*/
-
-/* Estilo básico para el enlace y el radio button que se vean como un botón*/
-#enlace1,
-#enlace2,
-#enlace3 {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 15px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-
-/* Estilos adicionales cuando el radio button está seleccionado o hacemos hover sobre el*/
-#radio1:checked+#enlace1 {
-    background-color: #F7B787;
-}
-
-#enlace1:hover {
-    background-color: #8CECD7;
-}
-
-#radio2:checked+#enlace2 {
-    background-color: #F7B787;
-}
-
-#enlace2:hover {
-    background-color: #8CECD7;
-}
-
-#radio3:checked+#enlace3 {
-    background-color: #F7B787;
-}
-
-#enlace3:hover {
-    background-color: #8CECD7;
-}
-
-/*según pinchamos en uno y otro boton = enlace + radiobutton, muestra u oculta una sección de la página*/
-/*ver seccion sobre Nosotras y ocultar el resto*/
-#radio1:checked~.mainSectionNosotras {
-    display: block;
-}
-
-#radio1:checked~.mainSectionNuestraMision {
-    display: none;
-}
-
-#radio1:checked~.mainSectionNuestrosValores {
-    display: none;
-}
-
-/*ver seccion Nuestra misión y ocultar el resto*/
-#radio2:checked~.mainSectionNuestraMision {
-    display: block;
-}
-
-#radio2:checked~.mainSectionNosotras {
-    display: none;
-}
-
-#radio2:checked~.mainSectionNuestrosValores {
-    display: none;
-}
-
-/*ver seccion Nuestros valores y ocultar el resto*/
-#radio3:checked~.mainSectionNuestrosValores {
-    display: block;
-}
-
-#radio3:checked~.mainSectionNosotras {
-    display: none;
-}
-
-#radio3:checked~.mainSectionNuestraMision {
-    display: none;
-}
