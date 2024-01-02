@@ -8,7 +8,7 @@
 
 body {
     padding: 46px 89px 0 89px;
-    height: 100vh;
+   /* height: 100vh;*/
     background: radial-gradient(circle at 71% 100%, rgba(247, 183, 135, 1) 11%, rgba(7, 102, 173, 1) 58%, rgba(41, 173, 178, 1) 93%);
 }
 
@@ -23,7 +23,7 @@ html {
     padding: 46px 89px 0 89px;
   /*  background: radial-gradient(circle at 71% 100%, rgba(247, 183, 135, 1) 11%, rgba(7, 102, 173, 1) 58%, rgba(41, 173, 178, 1) 93%);*/
 
-  background-color: pink;
+    /*background-color: pink;*/
     /*con la dos siguientes lineas hacemos el body responsive*/
     min-height: 100%;
     height: auto;
@@ -365,6 +365,15 @@ footer .logosRRSS {
     /* background-color: transparent;*/
     width: 800px;
     padding-top: 25px;
+
+    /*cambios para hacer más pequeña la foto*/
+    display: grid;
+    grid-template-rows: 80% 20%;
+    /*background-color: black;*/
+    width: auto;
+    height: 300px;
+    min-width: 256px;
+    /*......................................*/
 }
 
 
@@ -378,8 +387,8 @@ li {
 ul.slider1,
 ul.slider2 {
     position: relative;
-    width: 800px;
-    height: 200px;
+   /* width: 800px;
+    height: 200px;*//*comentado para los cambios de hacer la foto mas pequeña*/
 }
 
 /*formato del contenedor de la imagen que se muestra en el slider*/
@@ -389,7 +398,8 @@ ul.slider2 li {
     left: 0px;
     top: 0px;
     opacity: 0;
-    width: 800px;
+   /* width: 800px;*//*comentado para hacer los cambios de la foto mas pequeña*/
+   width: 100%;
     height: 170px;
     transition: opacity .5s;
 
