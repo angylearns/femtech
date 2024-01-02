@@ -349,14 +349,6 @@ footer .logosRRSS {
 }
 
 
-.box1Text p {
-    text-align: left;
-    padding-top: 10px;
-    padding-left: 40px;
-    padding-right: 40px;
-    margin-left: 40px;
-    color: white;
-}
 
 /*Slider: nosotras y mision .........................................................*/
 .container1,
@@ -370,11 +362,12 @@ footer .logosRRSS {
     /*cambios para hacer más pequeña la foto*/
     display: grid;
     grid-template-rows: 80% 20%;
-   /* background-color: black;*/
+   /*background-color: black;*/
     width: 100%;
     height: 300px;
    /* max-width: 700px;*/
     min-width: 256px;
+    
     /*......................................*/
 }
 
@@ -465,61 +458,25 @@ ul.slider2 li:target {
 
 /* fin primer slider .................................................*/
 
-/* botones lateral */
-
-/* .menuLateral {
-    text-align: center;
-    margin: 5px;
-}*/
-
-.menuLateral li {
-    display: flex;
-    text-align: center;
-    padding: 20px;
-}
-
-.menuLateral li a.enabled {
-    display: flex;
-    flex-direction: row;
-    background-color: #8CECD7;
-    padding: 15px;
-    width: 20px;
-    height: 20px;
-    font-size: 20px;
-    border-radius: 100%;
-}
-
-.menuLateral li a:hover {
-    background-color: #F7B787;
-}
-
-.disabled {
-    pointer-events: none;
-    cursor: default;
-    background-color: #e1dde2;
-    display: flex;
-    flex-direction: row;
-    padding: 15px;
-    width: 20px;
-    height: 20px;
-    font-size: 20px;
-    border-radius: 100%;
-}
 
 
 
-/* ......................*/
 
 
 /*slider tercero, lo ponemos aparte porque no es exactamente igual que el otro, aqui cambia tanto la imagen como el texto*/
 
 
-/*Slider: nuestros valores .........................................................*/
+/*Slider 3: nuestros valores .........................................................*/
+
+.container3 {
+    height: 400px;   
+}
 
 ul.slider3 {
     position: relative;
-    width: 800px;
+   /* width: 800px;*/width: 100%;
     height: 290px;
+    padding-bottom: 100px;
 }
 
 /*formato del contenedor de la imagen que se muestra en el slider*/
@@ -528,20 +485,36 @@ ul.slider3 li {
     left: 0px;
     top: 0px;
     opacity: 0;
-    width: inherit;
+   /* width: inherit;*/
     height: 170px;
     transition: opacity .5s;
     color: rgba(0, 0, 0, 0);
     /*texto transparente*/
     /* background-color: red;*/
+    text-align: center;
+    width: 100%;
+   
+}
+
+ul.slider3 li p{
+    text-align: left;
+    
+    margin-left: 100px;
+    /*padding-bottom: 20px;*/
+    
 }
 
 /*formato de la imagen que se muestra en el slider*/
 ul.slider3 li img {
-    width: 100%;
-    height: 170px;
+   /* width: 100%;
+    height: 170px;*/
     border-radius: 40px;
     object-fit: cover;
+
+    width: 100%;
+    height: 100%;
+    
+    max-width: 800px;
 }
 
 ul.slider3 li:first-child {
@@ -563,6 +536,7 @@ ul.slider3 li:target p {
 .menu3 {
     text-align: center;
     margin: 10px;
+    z-index: 999;
 }
 
 .menu3 li {
@@ -619,3 +593,54 @@ ul.slider3 li:target p {
 /*#radio1, #radio2, #radio3{
     visibility: hidden;
 }*/
+
+/* text format................... */
+
+.box1Text p {
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 60px;
+    padding-right: 40px;
+    margin-left: 40px;
+    color: white;
+}
+
+.textFormat{
+    color: #FFF;
+    text-shadow: 1px 4px 4px rgba(0, 0, 0, 0.54);
+    font-family: Outfit;
+    text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 1.6px;
+}
+
+.backText{
+    background-color: #201e1c3d;
+    margin-right: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.backText2{
+    background-color: #201e1c3d;
+    padding-left: 20px;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-right: 20px;
+    margin-right:40px;
+    margin-left: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.subtitle{
+    
+    font-size: 21px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* end Text Format...........................................*/
