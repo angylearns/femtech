@@ -3,6 +3,7 @@
 * {
     font-family: 'Outfit', sans-serif;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -171,20 +172,32 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 25px 0;
 }
 
 main .items {
+    width: 90%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-    gap: 6px;
+    grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
+    gap: 10px;
+    place-content: center;
 }
 
 main .items .item {
     background-color: #d9d9d954;
-    width: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     border-radius: 52px;
+    font-size: large;
+}
 
+main h1,
+.items .item section:first-child,
+.items .item h2,
+.items .item p.item__text{
+    margin-bottom: 20px;
 }
 
 .item .iphone,
@@ -242,9 +255,15 @@ main .items .item {
     letter-spacing: 1.6px;
 }
 
+.items .item__text,
+.items .item__price {
+    margin-top: auto;
+}
+
 .item__price {
     display: flex;
     justify-content: end;
+    flex-wrap: wrap;
     width: 90%;
 }
 
