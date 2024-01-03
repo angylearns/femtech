@@ -1,3 +1,110 @@
-.container_azul{
-    background : blue;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Outfit', sans-serif;
+    /* box-sizing: border-box;*/
+    margin: 0;
+}
+
+body {
+    padding: 46px 89px 0 89px;
+    /* height: 100vh;*/
+    background: radial-gradient(circle at 71% 100%, rgba(247, 183, 135, 1) 11%, rgba(7, 102, 173, 1) 58%, rgba(41, 173, 178, 1) 93%);
+}
+
+html {
+    height: auto;
+    min-height: 100%;
+
+}
+
+.body2 {
+    padding: 46px 89px 0 89px;
+    min-height: 100%;
+    height: auto;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+
+header {
+    background-color: #ffffff;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    color: #0766AD;
+    font-weight: bold;
+}
+
+header .image_logo {
+    height: 92px;
+}
+
+header .image_logo img {
+    max-height: 92px;
+}
+
+header .navbar {
+    width: 30%;
+}
+
+header .navbar ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .navbar ul li {
+    list-style: none;
+}
+
+#principal {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.container_azul {
+    padding: 40px;
+    background: #0766AD;
+    display: flex;
+    width: 900px;
+    gap: 100px;
+    border-radius: 30px;
+}
+
+#contenedorIzquierdo {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+   
+}
+
+#contenedorIzquierdoTop {
+    /*imagen solo para pruebas pero no es definitiva*/
+    background-image: url("../img/home/floating-iphones-1.png");
+    background-size: cover; /* tamaño de la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen  */
+    color: white; /* texto color blanco */
+    padding: 20px; /* Añade espacio interno para el contenido */
+    align-items: center;
+  
+}
+
+#contenedorIzquierdoBottom {
+    /*Solo para pruebas, este id se usa para dar formato al div que contiene los iconos de redes sociales*/
+    background-color: aquamarine;
+    margin-top: 130px;
+}
+
+#contenedorDerecho{
+   /* background-color: pink;*/
+}
+
+.form-control,
+#message {
+    border-radius: 20px;
 }
