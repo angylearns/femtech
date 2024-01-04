@@ -8,19 +8,34 @@
     <link rel="shortcut icon" href="img/favicons/logo_rombo.ico" type="image/x-icon">
 </head>
 <body>
+    <!-- El header desde acá... -->
     <header>
         <section class="image_logo">
-            <img src="img/logos/logo.png" alt="Logo de FemTech Innovations">
+            <a href="home.html">
+                <img src="img/logos/logo.png" class="logo--desktop" alt="Logo de FemTech Innovations" />
+                <img src="img/logos/logo_sinletras.png" class="logo--mobile" alt="Logo de FemTech Innovations" />
+            </a>
         </section>
-        <section class="navbar">
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="conocenos2.html">Nosotras</a></li>
-                <li><a href="formcontacta.html">Contacta</a></li>
-            </ul>
+        <input type="checkbox" class="toggle_menu" id="toggle_menu" />
+        <label for="toggle_menu" class="menu_icon">&#9776;</label>
+        <section class="navbar desktop">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="conocenos2.html">Nosotras</a></li>
+            <li><a href="formcontacta.html">Contacta</a></li>
+          </ul>
+        </section>
+        <section class="navbar mobile">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="conocenos2.html">Nosotras</a></li>
+            <li><a href="formcontacta.html">Contacta</a></li>
+          </ul>
         </section>
     </header>
+    <!-- ...hasta acá. -->
 
     <main>
         <h1>Nuestros productos</h1>
@@ -28,7 +43,7 @@
             <section class="item">
                 <section class="iphone"></section>
                 <h2>iPhone 13</h2>
-                <p class="items__text">Elegante smartphone con potente cámara, pantalla vibrante y rendimiento excepcional.</p>
+                <p class="item__text">Elegante smartphone con potente cámara, pantalla vibrante y rendimiento excepcional.</p>
                 <section class="item__price">
                     <p class="item__price--old">750€</p>
                     <p class="item__price--new">550€</p>
@@ -38,7 +53,7 @@
             <section class="item">
                 <section class="airpods"></section>
                 <h2>Airpods</h2>
-                <p class="items__text">Auriculares inalámbricos elegantes, sonido cristalino, diseño ergonómico y tecnología innovadora.</p>
+                <p class="item__text">Auriculares inalámbricos elegantes, sonido cristalino, diseño ergonómico y tecnología innovadora.</p>
                 <section class="item__price">
                     <p class="item__price--old">115€</p>
                     <p class="item__price--new">90€</p>
@@ -48,7 +63,7 @@
             <section class="item">
                 <section class="laptop"></section>
                 <h2>Portátil HP</h2>
-                <p class="items__text">Computadora portátil HP, potente, diseño delgado, rendimiento fiable y pantalla nítida.</p>
+                <p class="item__text">Computadora portátil HP, potente, diseño delgado, rendimiento fiable y pantalla nítida.</p>
                 <section class="item__price">
                     <p class="item__price--old">600€</p>
                     <p class="item__price--new">490€</p>
@@ -57,11 +72,11 @@
 
             <section class="item">
                 <section class="smartwatch"></section>
-                <h2>Samsung Galaxy watch 4</h2>
-                <p class="items__text">Innovador Samsung Galaxy Watch 4 redefine experiencia con tecnología avanzada y elegancia.</p>
+                <h2>Galaxy watch 4</h2>
+                <p class="item__text">Innovador Samsung Galaxy Watch 4 redefine experiencia con tecnología avanzada y elegancia.</p>
                 <section class="item__price">
                     <p class="item__price--old">600€</p>
-                    <p class="item__price--new">490€</p>
+                    <p class="item__price--new">250€</p>
                 </section>
             </section>
         </section>
