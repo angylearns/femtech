@@ -2,13 +2,13 @@
 
 * {
     font-family: 'Outfit', sans-serif;
-   /* box-sizing: border-box;*/
+    /* box-sizing: border-box;*/
     margin: 0;
 }
 
 body {
     padding: 46px 89px 0 89px;
-   /* height: 100vh;*/
+    /* height: 100vh;*/
     background: radial-gradient(circle at 71% 100%, rgba(247, 183, 135, 1) 11%, rgba(7, 102, 173, 1) 58%, rgba(41, 173, 178, 1) 93%);
 }
 
@@ -17,21 +17,22 @@ body {
 html {
     height: auto;
     min-height: 100%;
-    
+
 }
+
 .body2 {
     padding: 46px 89px 0 89px;
-  /*  background: radial-gradient(circle at 71% 100%, rgba(247, 183, 135, 1) 11%, rgba(7, 102, 173, 1) 58%, rgba(41, 173, 178, 1) 93%);*/
+    /*  background: radial-gradient(circle at 71% 100%, rgba(247, 183, 135, 1) 11%, rgba(7, 102, 173, 1) 58%, rgba(41, 173, 178, 1) 93%);*/
 
     /*background-color: pink;*/
     /*con la dos siguientes lineas hacemos el body responsive*/
     min-height: 100%;
     height: auto;
-    
+
     margin-bottom: 0;
     padding-bottom: 0;
 
-     /*display: flex;
+    /*display: flex;
     flex-direction: column;*/
 }
 
@@ -167,6 +168,7 @@ header .navbar.mobile {
         font-weight: 500;
     }
 }
+
 /* ...hasta acá. */
 
 
@@ -278,7 +280,7 @@ main .items .item {
 footer {
     background-color: #ffffff;
     border-radius: 50px;
-    display:flex;
+    display: flex;
     align-items: center;
     height: 100px;
     color: #0766AD;
@@ -339,7 +341,7 @@ footer .logosRRSS {
 /* end footer .........................................................................................*/
 
 /* Upper menu .........................................................................................*/
-.menuSuperior{
+.menuSuperior {
     display: flex;
     justify-content: space-between;
 }
@@ -361,25 +363,30 @@ footer .logosRRSS {
 
 
 /* button 1 active*/
-#radio1:checked ~ .menuSuperior>#enlace1 {
+#radio1:checked~.menuSuperior>#enlace1 {
     background-color: #F7B787;
 }
+
 /* button 1 hover*/
 #enlace1:hover {
     background-color: #8CECD7;
 }
+
 /* button 2 active*/
 #radio2:checked~.menuSuperior>#enlace2 {
     background-color: #F7B787;
 }
+
 /* button 2 hover*/
 #enlace2:hover {
     background-color: #8CECD7;
 }
+
 /* button 3 active*/
 #radio3:checked~.menuSuperior>#enlace3 {
     background-color: #F7B787;
 }
+
 /* button 3 hover*/
 #enlace3:hover {
     background-color: #8CECD7;
@@ -390,34 +397,42 @@ footer .logosRRSS {
 #radio1:checked~.mainSectionNosotras {
     display: block;
 }
+
 /*hide section*/
 #radio1:checked~.mainSectionNuestraMision {
     display: none;
 }
+
 /*hide section*/
 #radio1:checked~.mainSectionNuestrosValores {
     display: none;
 }
+
 /*SEE section "Mision" and hide the rest*/
 #radio2:checked~.mainSectionNuestraMision {
     display: block;
 }
+
 /*hide section*/
 #radio2:checked~.mainSectionNosotras {
     display: none;
 }
+
 /*hide section*/
 #radio2:checked~.mainSectionNuestrosValores {
     display: none;
 }
+
 /*SEE section "Valores" and hide the rest*/
 #radio3:checked~.mainSectionNuestrosValores {
     display: block;
 }
+
 /*hide section*/
 #radio3:checked~.mainSectionNosotras {
     display: none;
 }
+
 /*hide section*/
 #radio3:checked~.mainSectionNuestraMision {
     display: none;
@@ -455,7 +470,6 @@ footer .logosRRSS {
 
 /*Slider: nosotras y mision .........................................................*/
 .container1,
-.container2,
 .container3 {
     margin: auto;
     /* background-color: transparent;*/
@@ -465,15 +479,20 @@ footer .logosRRSS {
     /*cambios para hacer más pequeña la foto*/
     display: grid;
     grid-template-rows: 80% 20%;
-   /*background-color: black;*/
+    /*background-color: black;*/
     width: 100%;
     height: 300px;
-   /* max-width: 700px;*/
+    /* max-width: 700px;*/
     min-width: 256px;
-    
+
     /*......................................*/
 }
 
+.container2{ /* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
+    display: flex;
+    flex-direction: column;
+    
+}
 
 ul,
 li {
@@ -485,9 +504,11 @@ li {
 ul.slider1,
 ul.slider2 {
     position: relative;
-    /*width: 800px;*//*comentario para hacer la imagen mas pequeña*/
+    /*width: 800px;*/
+    /*comentario para hacer la imagen mas pequeña*/
     width: 100%;
-    height: 200px;/*comentado para los cambios de hacer la foto mas pequeña*/
+    height: 200px;
+    /*comentado para los cambios de hacer la foto mas pequeña*/
 }
 
 /*formato del contenedor de la imagen que se muestra en el slider*/
@@ -497,8 +518,9 @@ ul.slider2 li {
     left: 0px;
     top: 0px;
     opacity: 0;
-   /* width: 800px;*//*comentado para hacer los cambios de la foto mas pequeña*/
-   width: 100%;
+    /* width: 800px;*/
+    /*comentado para hacer los cambios de la foto mas pequeña*/
+    width: 100%;
     height: 170px;
     transition: opacity .5s;
     text-align: center;
@@ -509,9 +531,9 @@ ul.slider1 li img,
 ul.slider2 li img {
     width: 100%;
     height: 100%;
-    
+
     max-width: 800px;
-    
+
     border-radius: 40px;
     object-fit: cover;
     /*Modifica el tamaño del elemento remplazado para llenar el cuadro de contenido. El objeto completo ocupará todo el espacio de la caja. Si el tamaño del elemento no concuerda con el de su caja, se estirará para llenarlo*/
@@ -572,12 +594,13 @@ ul.slider2 li:target {
 /*Slider 3: nuestros valores .........................................................*/
 
 .container3 {
-    height: 400px;   
+    height: 400px;
 }
 
 ul.slider3 {
     position: relative;
-   /* width: 800px;*/width: 100%;
+    /* width: 800px;*/
+    width: 100%;
     height: 290px;
     padding-bottom: 100px;
 }
@@ -588,7 +611,7 @@ ul.slider3 li {
     left: 0px;
     top: 0px;
     opacity: 0;
-   /* width: inherit;*/
+    /* width: inherit;*/
     height: 170px;
     transition: opacity .5s;
     color: rgba(0, 0, 0, 0);
@@ -596,27 +619,27 @@ ul.slider3 li {
     /* background-color: red;*/
     text-align: center;
     width: 100%;
-   
+
 }
 
-ul.slider3 li p{
+ul.slider3 li p {
     text-align: left;
-    
+
     margin-left: 100px;
     /*padding-bottom: 20px;*/
-    
+
 }
 
 /*formato de la imagen que se muestra en el slider*/
 ul.slider3 li img {
-   /* width: 100%;
+    /* width: 100%;
     height: 170px;*/
     border-radius: 40px;
     object-fit: cover;
 
     width: 100%;
     height: 100%;
-    
+
     max-width: 800px;
 }
 
@@ -708,7 +731,7 @@ ul.slider3 li:target p {
     color: white;
 }
 
-.textFormat{
+.textFormat {
     color: #FFF;
     text-shadow: 1px 4px 4px rgba(0, 0, 0, 0.54);
     font-family: Outfit;
@@ -720,30 +743,51 @@ ul.slider3 li:target p {
     letter-spacing: 1.6px;
 }
 
-.backText{
+.backText {
     background-color: #201e1c3d;
     margin-right: 10px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 
-.backText2{
+.backText2 {
     background-color: #201e1c3d;
     padding-left: 20px;
     padding-bottom: 40px;
     padding-top: 20px;
     padding-right: 20px;
-    margin-right:40px;
+    margin-right: 40px;
     margin-left: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 
-.subtitle{
-    
+.subtitle {
+
     font-size: 21px;
     text-align: center;
     margin-bottom: 10px;
 }
 
 /* end Text Format...........................................*/
+
+/* carrusel nuestra mision*/
+#carousel1 {
+    /*establecer medidas del contenedor de la imagen ya que esta se ajuta a su contenedor*/
+    width: 600px;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#carouselExample {
+
+    width: 750px;
+    align-self: center;
+    justify-content: center;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*........................*/
