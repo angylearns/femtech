@@ -27,6 +27,8 @@
     background: radial-gradient(circle at 71% 100%, rgba(247, 183, 135, 1) 11%, rgba(7, 102, 173, 1) 58%, rgba(41, 173, 178, 1) 93%);
 }
 
+
+/* Header desde acá... */
 header {
     background-color: #ffffff;
     border-radius: 50px;
@@ -36,29 +38,131 @@ header {
     height: 100px;
     color: #0766AD;
     font-weight: bold;
-    margin: 0 89px;
+    margin-right: 89px;
+    margin-left: 89px;
 }
 
-header .image_logo {
+header .image_logo a {
     height: 92px;
+    display: flex;
+    align-items: center;
 }
 
-header .image_logo img {
-    max-height: 92px;
+header .image_logo .logo--desktop {
+    border-radius: 50px 0 0 50px;
+    max-height: 80%;
+    width: auto;
+}
+
+header .image_logo .logo--mobile {
+    display: none;
 }
 
 header .navbar {
     width: 30%;
+    display: block;
+    position: static;
+    background-color: transparent;
+    padding-top: 30px;
+    ;
 }
 
 header .navbar ul {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding-left: 0;
 }
 
 header .navbar ul li {
     list-style: none;
 }
+
+header .toggle_menu,
+header .menu_icon {
+    display: none;
+}
+
+header .navbar a {
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+header .navbar a:hover {
+    color: #EE7214;
+}
+
+header .navbar.mobile {
+    display: none;
+}
+
+
+@media screen and (max-width:420px) {
+    body {
+        padding: 40px 30px;
+    }
+
+    header .image_logo .logo--desktop,
+    header .navbar.desktop {
+        display: none;
+    }
+
+    header .image_logo .logo--mobile {
+        display: block;
+        border-radius: 50px;
+        max-height: 80%;
+    }
+
+    header .menu_icon {
+        display: block;
+        font-size: xx-large;
+    }
+
+    header .navbar.mobile ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header .navbar.mobile li {
+        text-align: center;
+    }
+
+    header .navbar.mobile li a {
+        margin: 0;
+    }
+
+    header .toggle_menu:checked~.navbar.mobile {
+        background-color: #145659;
+        border-radius: 50px;
+        display: block;
+        position: absolute;
+        top: 115px;
+        right: 50px;
+        height: 200px;
+        min-width: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header .toggle_menu:checked~.navbar.mobile ul {
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+        margin: 0;
+        height: 70%;
+        min-width: auto;
+    }
+
+    header .toggle_menu:checked~.navbar.mobile ul li a {
+        color: #8CECD7;
+        font-weight: 500;
+    }
+}
+
+/* ...hasta acá. */
 
 
 .home_main_top-page {
@@ -119,51 +223,86 @@ header .navbar ul li {
     padding-top: 10px;
 }
 
-.reviews-text {
+.reviews-button-text {
     color: #29ADB2;
     font-family: Outfit;
     font-size: 14px;
     font-style: normal;
     font-weight: 900;
-    line-height: 30px;
+    text-decoration: none;
+    padding-bottom: 10px;
     /* 214.286% */
 }
 
 /* End of home top page .....................................................................................*/
 
-
+/*Bottom page....................................................................................*/
 
 .customer_photos {
-    width: 9.3vh;
-    height: 9.3vh;
+    width: 8.2vh;
+    height: 8.2vh;
     border-radius: 50%;
 }
 
-/*Bottom page....................................................................................*/
-
-.main_bottom-page_home{
-  display: flex;
-  justify-content:space-evenly;
-  background-image: url(/img/home/curve-background.png)
+.bottom{
+    display:flex;
+    flex-direction: column;
 }
 
-.customer-and-name{
-display:flex;
-align-items: center;
+.bottom-background {
+    background-image: url(/img/home/curve-background.png);
+    background-position-y: -20%;
+    background-size: cover;
+    height: 100vh;
+    /* Asegúrate de que ocupe el 100% del contenedor */
+    width: 100%;
+    /* Asegúrate de que ocupe el 100% del contenedor */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-repeat: no-repeat;
 }
 
-.customer_photos{
-    margin-right:20px;
-    margin-bottom: 30px
-
+.main_bottom-page_home {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .review {
     width: 292px;
-height: 443px;
-flex-shrink: 0;
-border-radius: 50px;
-background: #29ADB2;
+    height: 443px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: #29ADB2;
+}
+
+.review:hover {
+    transform: translateY(-15px);
+    /* Mueve la reseña hacia arriba */
+}
+
+.customer-and-name {
+    display: flex;
+    align-items: center;
+    padding: 30px 30px 0px 50px
+}
+
+.customer_photos {
+    margin-right: 20px;
+    margin-bottom: 30px
+}
+
+.reviews-text {
+    width: 250px;
+    height: 348px;
+    padding-left: 50px;
+    color: #FFF;
+    font-family: Outfit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    /* 214.286% */
 
 }
 
@@ -174,20 +313,25 @@ background: #29ADB2;
 footer {
     background-color: #ffffff;
     border-radius: 50px;
-    display:flex;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     height: 100px;
     color: #0766AD;
     font-weight: bold;
     /*footer position at the end of the page*/
-    position: relative;
+    position: arelative;
     bottom: 0;
-    padding-right: 300px;
+    /* margin-bottom: 5px;*/
+    margin-right: 89px;
+    margin-left: 89px;
+
+    /* width: 100%;*/
 }
 
 footer .copyright {
     width: 75%;
-    margin-left: 25px;
+    margin-left: 50px;
 }
 
 footer .logosRRSS {

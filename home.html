@@ -14,19 +14,34 @@
 
     <section class="top home">
 
-        <header>
-            <section class="image_logo">
-                <img src="img/logos/logo.png" alt="Logo de FemTech Innovations">
-            </section>
-            <section class="navbar">
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="productos.html">Productos</a></li>
-                    <li><a href="conocenos2.html">Nosotras</a></li>
-                    <li><a href="formcontacta.html">Contacta</a></li>
-                </ul>
-            </section>
-        </header>
+        <!-- El header desde acá... -->
+    <header>
+        <section class="image_logo">
+            <a href="home.html">
+                <img src="img/logos/logo.png" class="logo--desktop" alt="Logo de FemTech Innovations" />
+                <img src="img/logos/logo_sinletras.png" class="logo--mobile" alt="Logo de FemTech Innovations" />
+            </a>
+        </section>
+        <input type="checkbox" class="toggle_menu" id="toggle_menu" />
+        <label for="toggle_menu" class="menu_icon">&#9776;</label>
+        <section class="navbar desktop">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="conocenos2.html">Nosotras</a></li>
+            <li><a href="formcontacta.html">Contacta</a></li>
+          </ul>
+        </section>
+        <section class="navbar mobile">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="conocenos2.html">Nosotras</a></li>
+            <li><a href="formcontacta.html">Contacta</a></li>
+          </ul>
+        </section>
+    </header>
+    <!-- ...hasta acá. -->
 
         <main class="home_main_top-page">
             <article class="left-home_main_top-page">
@@ -41,12 +56,13 @@
         </main>
 
         <div class="Reviews-button">
-            <p class="reviews-text"> Our happy customers </p>
+            <a class="reviews-button-text" href="#bottom-page" class="boton-segunda-pantalla"> Our happy customers </a>
         </div>
 
     </section>
 
-    <section class="bottom home">
+    <section class="bottom home" id="bottom-page">
+        <div class="bottom-background">
         <main class="main_bottom-page_home">
             <article class="review">
                 <div class="customer-and-name">
@@ -56,7 +72,7 @@
                 <div>
                     <img class="five-stars" src="img/home/Five stars.png" alt="five-stars">
                 </div>
-                <div>
+                <div class="reviews-text">
                     <p>“¡Compra del mes! Encontré mi cargador solar aquí y es la salvación en mis viajes. No más
                         preocupaciones por quedarme sin batería!! Y además, ayudo al medio ambiente ¿Qué más se puede
                         pedir?”</p>
@@ -71,7 +87,7 @@
                 <div>
                     <img class="five-stars" src="img/home/Five stars.png" alt="five-stars">
                 </div>
-                <div>
+                <div class="reviews-text">
                     <p>“Esta página es como un imán para quienes amamos los gadgets y queremos hacer nuestra parte por
                         el
                         ambiente. Compré un auricular y su calidad es top, además de sentirme bien por su enfoque
@@ -88,13 +104,12 @@
                 <div>
                     <img class="five-stars" src="img/home/Five stars.png" alt="five stars">
                 </div>
-                <div>
+                <div class="reviews-text">
                     <p>"Una sorpresa agradable: calidad excelente a precios muy accesibles. Mi compra aquí superó mis
                         expectativas en todos los sentidos. ¡Recomendado sin duda!"</p>
                 </div>
             </article>
         </main>
-
         <footer>
             <section class="copyright">
                 &copy; FemTech Innovations
@@ -110,8 +125,8 @@
                     <div class="facebook"></div>
                 </a>
             </section>
-        </footer>    
-
+        </footer>
+    </div>
     </section>
 
 </body>
