@@ -41,6 +41,7 @@ header {
 
 header .image_logo {
     height: 92px;
+    
 }
 
 header .image_logo img {
@@ -58,8 +59,9 @@ header .navbar ul {
 
 header .navbar ul li {
     list-style: none;
-   
-}
+    
+} 
+
 
 #principal {
     padding-top: 100px;
@@ -91,19 +93,66 @@ header .navbar ul li {
     color: white; /* texto color blanco */
     padding: 20px; /* Añade espacio interno para el contenido */
     align-items: center;
-  
 }
 
-#contenedorIzquierdoBottom {
-    /*Solo para pruebas, este id se usa para dar formato al div que contiene los iconos de redes sociales*/
-    background-color: aquamarine;
-    margin-top: 130px;
+.botonform{
+    right: 30px;
+    width: 132px;
+    height: 53px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: #8CECD7;
+}
+
+   /* para que el boton cambie de color cuando esta el mouse ensima,"hover"*/
+.cajita_boton{
+    display: flex;
+justify-content: flex-end;}
+#botonform:hover{
+    background-color: blue;
 }
 
 #contenedorDerecho{
+
    /* background-color: pink;*/
 }
 
 .form-control,
 #message {
     border-radius: 20px;}
+
+    footer {
+        background-color: #ffffff;
+        border-radius: 50px;
+        display:flex;
+        align-items: center;
+        height: 100px;
+        color: #0766AD;
+        font-weight: bold;
+        /*footer position at the end of the page*/
+        position: relative;
+        bottom: 0;
+        padding-right: 300px;
+    }
+    
+    footer .copyright {
+        width: 75%;
+        margin-left: 25px;
+    }
+    
+    footer .logosRRSS {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        gap: 10px;
+        margin-left: 100px;
+    }
+    
+    /*set icons measure*/
+    .facebook,
+    .twitter,
+    .instagram {
+        width: 50px;
+        height: 50px;
+    }
+    
