@@ -10,19 +10,35 @@
 </head>
 
 <body class="body2">
-    <header>
-        <section class="image_logo">
-            <img src="img/logos/logo.png" alt="Logo de FemTech Innovations">
-        </section>
-        <section class="navbar">
-            <ul>
-                <li>Home</li>
-                <li>Productos</li>
-                <li>Nosotras</li>
-                <li>Contacta</li>
-            </ul>
-        </section>
-    </header>
+ <!-- El header desde acá... -->
+ <header>
+    <section class="image_logo">
+        <a href="home.html">
+            <img src="img/logos/logo.png" class="logo--desktop" alt="Logo de FemTech Innovations" />
+            <img src="img/logos/logo_sinletras.png" class="logo--mobile" alt="Logo de FemTech Innovations" />
+        </a>
+    </section>
+    <input type="checkbox" class="toggle_menu" id="toggle_menu" />
+    <label for="toggle_menu" class="menu_icon">&#9776;</label>
+    <section class="navbar desktop">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="conocenos2.html">Nosotras</a></li>
+        <li><a href="formcontacta.html">Desktop</a></li>
+      </ul>
+    </section>
+    <section class="navbar mobile">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="conocenos2.html">Nosotras</a></li>
+        <li><a href="formcontacta.html">Contacta</a></li>
+      </ul>
+    </section>
+</header>
+<!-- ...hasta acá. -->
+
     <!-- Mostrar botón Nosotras-->
     <input type="radio" id="radio1" name="selection" style="display: none;">
 
