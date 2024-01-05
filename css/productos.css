@@ -208,6 +208,11 @@ header .navbar.mobile {
         color: #8CECD7;
         font-weight: 500;
     }
+
+    header .navbar.mobile .active_page {
+        text-decoration: underline #8CECD7;
+        text-decoration-thickness: 1.5px;
+    }
 }
 /* .........................hasta acá. */
 
