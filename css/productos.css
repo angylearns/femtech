@@ -295,6 +295,92 @@ main h1,
     background-image: url('../img/productos/productos_smartwatch2.jpg');
 }
 
+@media screen and (max-width:420px) {
+    @keyframes changeIphoneImage {
+        0% {
+            background-image: url('../img/productos/productos_iphone1.png');
+        }
+
+        50% {
+            background-image: url('../img/productos/productos_iphone2.png');
+        }
+
+        100% {
+            background-image: url('../img/productos/productos_iphone1.png');
+        }
+    }
+
+    main .items .item .iphone {
+        animation-name: changeIphoneImage;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+
+    @keyframes changeAirpodsImage {
+        0% {
+            background-image: url('../img/productos/productos_airpods1.jpg');
+        }
+
+        50% {
+            background-image: url('../img/productos/productos_airpods2.jpg');
+        }
+
+        100% {
+            background-image: url('../img/productos/productos_airpods1.jpg');
+        }
+    }
+
+    main .items .item .airpods {
+        animation-name: changeAirpodsImage;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+
+    @keyframes changeLaptopImage {
+        0% {
+            background-image: url('../img/productos/productos_laptop1.jpg');
+        }
+
+        50% {
+            background-image: url('../img/productos/productos_laptop2.jpg');
+        }
+
+        100% {
+            background-image: url('../img/productos/productos_laptop1.jpg');
+        }
+    }
+
+    main .items .item .laptop {
+        animation-name: changeLaptopImage;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+
+    @keyframes changeSmartwatchImage {
+        0% {
+            background-image: url('../img/productos/productos_smartwatch1.jpg');
+        }
+
+        50% {
+            background-image: url('../img/productos/productos_smartwatch2.jpg');
+        }
+
+        100% {
+            background-image: url('../img/productos/productos_smartwatch1.jpg');
+        }
+    }
+
+    main .items .item .smartwatch {
+        animation-name: changeSmartwatchImage;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+}
+
 .items h2 {
     color: #FFF;
     text-shadow: 1px 4px 4px rgba(0, 0, 0, 0.54);
