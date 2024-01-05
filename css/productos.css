@@ -272,6 +272,10 @@ main h1,
 }
 
 @media screen and (max-width:420px) {
+    main .items .item:hover {
+        transform: none;
+    }
+
     @keyframes changeIphoneImage {
         0% {
             background-image: url('../img/productos/productos_iphone1.png');
