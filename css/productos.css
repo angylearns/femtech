@@ -271,7 +271,7 @@ main h1,
     background-image: url('../img/productos/productos_smartwatch2.jpg');
 }
 
-@media screen and (max-width:420px) {
+@media screen and (max-width:768px) {
     main .items .item:hover {
         transform: none;
     }
@@ -417,11 +417,19 @@ main h1,
     main .items {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    main .items .item:hover {
+        transform: none;
+    }
 }
 
 @media screen and (max-width: 580px) {
     main .items {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    main .items .item:hover {
+        transform: none;
     }
 }
 
