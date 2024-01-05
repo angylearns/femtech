@@ -1,38 +1,250 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&display=swap');
 
+
 * {
     font-family: 'Outfit', sans-serif;
-   /* box-sizing: border-box;*/
+    /* box-sizing: border-box;*/
     margin: 0;
 }
 
-body {
-    padding: 46px 89px 0 89px;
-   /* height: 100vh;*/
-    background: radial-gradient(circle at 71% 100%, rgba(247, 183, 135, 1) 11%, rgba(7, 102, 173, 1) 58%, rgba(41, 173, 178, 1) 93%);
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/********************************* HEADER ***********************************************/
+/* Header desde acá...................... */
+header {
+    background-color: #ffffff;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    color: #0766AD;
+    font-weight: bold;
+}
+
+header .image_logo a {
+    height: 92px;
+    display: flex;
+    align-items: center;
+}
+
+header .image_logo .logo--desktop {
+    border-radius: 50px 0 0 50px;
+    max-height: 80%;
+    width: auto;
+}
+
+header .image_logo .logo--mobile {
+    display: none;
+}
+
+header .navbar {
+    width: 30%;
+    display: block;
+    position: static;
+    background-color: transparent;
+    padding: 0;
+}
+
+header .navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding-left: 0;
+}
+
+header .navbar ul li {
+    list-style: none;
+}
+
+header .toggle_menu,
+header .menu_icon {
+    display: none;
+}
+
+header .navbar a {
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+/*  CAMBIOS DESDE ACÁ  */
+
+/* Hover underline del header */
+header .navbar.desktop a:hover {
+    color: #EE7214;
+}
+
+header .navbar.desktop .hover_underline_animation {
+    display: inline-block;
+    position: relative;
+    color: #0766AD;
+}
+
+header .navbar.desktop .hover_underline_animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0766AD;
+    transform-origin: bottom right;
+    transition: transform 0.35s ease-out;
+}
+   
+header .navbar.desktop .hover_underline_animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+header .navbar a:visited {
+    color: #0766AD;
+}
+
+/* Active Page */
+header .navbar.desktop .active_page {
+    text-decoration: underline #EE7214;
+    text-decoration-thickness: 2px;
+}
+
+header .navbar.desktop .active_page:hover {
+    text-decoration: underline #0766AD;
+    text-decoration-thickness: 2px;
+}
+
+/*  CAMBIOS HASTA ACÁ  */
+
+header .navbar.mobile {
+    display: none;
+}
+
+@media screen and (max-width:420px) {
+    body {
+        padding: 40px 30px;
+    }
+
+    header .image_logo .logo--desktop,
+    header .navbar.desktop {
+        display: none;
+    }
+
+    header .image_logo .logo--mobile {
+        display: block;
+        border-radius: 50px;
+        max-height: 80%;
+    }
+
+    header .menu_icon {
+        display: block;
+        font-size: xx-large;
+    }
+
+    header .navbar.mobile ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header .navbar.mobile li {
+        text-align: center;
+    }
+
+    header .navbar.mobile li a {
+        margin: 0;
+    }
+
+    header .toggle_menu:checked~.navbar.mobile {
+        background-color: #145659;
+        border-radius: 50px;
+        display: block;
+        position: absolute;
+        top: 115px;
+        right: 50px;
+        height: 200px;
+        min-width: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header .toggle_menu:checked~.navbar.mobile ul {
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+        margin: 0;
+        height: 70%;
+        min-width: auto;
+    }
+
+    header .toggle_menu:checked~.navbar.mobile ul li a {
+        color: #8CECD7;
+        font-weight: 500;
+    }
+
+    header .navbar.mobile .active_page {
+        text-decoration: underline #8CECD7;
+        text-decoration-thickness: 1.5px;
+    }
+}
+/* .........................hasta acá. */
+
+/**********************************fin Header ******************************************/
+body {
+    padding: 46px 89px 0 89px;
+    /*  height: 100vh;*/
+    height: 100%;
+    background: radial-gradient(circle at 71% 100%, rgba(247, 183, 135, 1) 11%, rgba(7, 102, 173, 1) 58%, rgba(41, 173, 178, 1) 93%);
+    min-height: 100vh;
+    font-size: 18px;
+    color: white;
+}
+
+p {
+    font-size: 1.2em;
+    /* Utilizar em para un tamaño de fuente relativo al tamaño de fuente del elemento padre (body en este caso) */
+    max-width: 100%;
+    /* Hacer que el párrafo no sea más ancho que el ancho de su contenedor */
+    color: white;
+}
+
+.titulo1{
+    font-size: 2em;
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        font-size: 14px;
+        /* Cambiar el tamaño de fuente base en pantallas más grandes si es necesario */
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        font-size: 20px;
+        /* Ajustar el tamaño de fuente base para pantallas aún más grandes si es necesario */
+    }
+}
 
 /*damos formato a height para que al agrandar o encoger la ventana y junto con las propiedades body2 nos muestre bien el fondo*/
 html {
     height: auto;
     min-height: 100%;
-    
 }
+
 .body2 {
     padding: 46px 89px 0 89px;
-  /*  background: radial-gradient(circle at 71% 100%, rgba(247, 183, 135, 1) 11%, rgba(7, 102, 173, 1) 58%, rgba(41, 173, 178, 1) 93%);*/
-
-    /*background-color: pink;*/
-    /*con la dos siguientes lineas hacemos el body responsive*/
     min-height: 100%;
-    height: auto;
-    
     margin-bottom: 0;
     padding-bottom: 0;
-
-     /*display: flex;
-    flex-direction: column;*/
 }
 
 
@@ -167,118 +379,18 @@ header .navbar.mobile {
         font-weight: 500;
     }
 }
+
 /* ...hasta acá. */
 
 
 /* FIN HEADER*/
 
-main {
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-main .items {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 64px;
-}
-
-main .items .item {
-    background-color: #d9d9d954;
-    width: 363px;
-    padding: 20px;
-    border-radius: 52px;
-}
-
-.iphone,
-.airpods,
-.laptop {
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 52px;
-}
-
-.iphone {
-    background-image: url('../img/productos/productos_iphone1.png');
-}
-
-.iphone:hover {
-    background-image: url('../img/productos//productos_iphone2.png');
-}
-
-.airpods {
-    background-image: url('../img/productos//productos_airpods2.jpg');
-}
-
-.airpods:hover {
-    background-image: url('../img/productos//productos_airpods1.jpg');
-}
-
-.laptop {
-    background-image: url('../img/productos//productos_laptop1.jpg');
-}
-
-.laptop:hover {
-    background-image: url('../img/productos//productos_laptop2.jpg');
-}
-
-.items h2 {
-    color: #FFF;
-    text-shadow: 1px 4px 4px rgba(0, 0, 0, 0.54);
-    font-family: Outfit;
-    text-align: center;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 40px;
-    /* 125% */
-    letter-spacing: 1.6px;
-}
-
-.item__price {
-    display: flex;
-    justify-content: end;
-    width: 90%;
-}
-
-.item__price p {
-    margin-left: 20px;
-}
-
-.item__price--old {
-    color: #FFF;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Outfit;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 40px;
-    /* 200% */
-    letter-spacing: 1px;
-    text-decoration: line-through;
-}
-
-.item__price--new {
-    color: #FFF;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Outfit;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 40px;
-    /* 125% */
-    letter-spacing: 1.6px;
-}
-
-/* Footer .....................................................................................*/
-
+/* Footer Inicio .....................................................................................*/
 footer {
     background-color: #ffffff;
     border-radius: 50px;
-    display:flex;
+    display: flex;
     align-items: center;
     height: 100px;
     color: #0766AD;
@@ -338,388 +450,67 @@ footer .logosRRSS {
 
 /* end footer .........................................................................................*/
 
-/* Upper menu .........................................................................................*/
-.menuSuperior{
+/* Contenidos .........................................................................................*/
+.contenedorPpal {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    margin: 40px;
+    gap: 20px;
+    height: fit-content;
 }
 
-
-/* basic style in order to set the apparence of button*/
-#enlace1,
-#enlace2,
-#enlace3 {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 15px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+.mainSectionNosotras {
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.212);
+    border-radius: 40px;
 }
 
-
-/* button 1 active*/
-#radio1:checked ~ .menuSuperior>#enlace1 {
-    background-color: #F7B787;
-}
-/* button 1 hover*/
-#enlace1:hover {
-    background-color: #8CECD7;
-}
-/* button 2 active*/
-#radio2:checked~.menuSuperior>#enlace2 {
-    background-color: #F7B787;
-}
-/* button 2 hover*/
-#enlace2:hover {
-    background-color: #8CECD7;
-}
-/* button 3 active*/
-#radio3:checked~.menuSuperior>#enlace3 {
-    background-color: #F7B787;
-}
-/* button 3 hover*/
-#enlace3:hover {
-    background-color: #8CECD7;
-}
-
-/*As we click on each button=link+radiobutton, it shows or hides a section of the page*/
-/*SEE section "Nosotras" and hide the rest*/
-#radio1:checked~.mainSectionNosotras {
-    display: block;
-}
-/*hide section*/
-#radio1:checked~.mainSectionNuestraMision {
-    display: none;
-}
-/*hide section*/
-#radio1:checked~.mainSectionNuestrosValores {
-    display: none;
-}
-/*SEE section "Mision" and hide the rest*/
-#radio2:checked~.mainSectionNuestraMision {
-    display: block;
-}
-/*hide section*/
-#radio2:checked~.mainSectionNosotras {
-    display: none;
-}
-/*hide section*/
-#radio2:checked~.mainSectionNuestrosValores {
-    display: none;
-}
-/*SEE section "Valores" and hide the rest*/
-#radio3:checked~.mainSectionNuestrosValores {
-    display: block;
-}
-/*hide section*/
-#radio3:checked~.mainSectionNosotras {
-    display: none;
-}
-/*hide section*/
-#radio3:checked~.mainSectionNuestraMision {
-    display: none;
-}
-
-/* end Upper menu .........................................................................................*/
-
-.mainSectionNosotras,
 .mainSectionNuestraMision,
 .mainSectionNuestrosValores {
-    /*  display: grid;
-    grid-template-columns: 100%;*/
-    /* gap: 20px;*/
-    /* padding-left: 20px;*/
     padding-top: 20px;
     margin-bottom: 20px;
-    /* margin-bottom: 150px;*/
-    /*height: auto;*/
-    /* background-color: rgb(41, 97, 219);*/
     background-color: rgba(255, 255, 255, 0.212);
-   
     border-radius: 40px;
     display: flex;
     flex-direction: column;
     width: 100%;
-    /*height: 50vh; *//******************************************************************************************************************************/
-
     padding-bottom: 25px;
 }
 
-.mainSectionNuestraMision,
-.mainSectionNuestrosValores {
-    display: none;
+
+.container1 {
+    font-family: "Poppins", sans-serif;
+    /* min-height: 100vh;*/
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-/*.mainSectionNuestraMision{
-    justify-content: 80vh;
-}*/
+.container2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
 
-/*Slider: nosotras y mision .........................................................*/
-.container1,
 
 .container3 {
     margin: auto;
-    /* background-color: transparent;*/
-    width: 800px;
     padding-top: 25px;
-
-    /*cambios para hacer más pequeña la foto*/
- /*   display: grid;
-    grid-template-rows: 80% 20%; aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
-   /*background-color: black;*/
-   display:flex;
-    flex-direction: column;
-    width: 100%;
-   
-    /* height: 300px;*//* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
-    height: 100%;
-
-   /* max-width: 700px;*/
-    min-width: 256px;
-    
-    /*......................................*/
-    
-}
-.container2{ /* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
     display: flex;
     flex-direction: column;
-    height: 100%;
-}
-
-
-.container3{ /* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaammmmmm*/
-    display: flex;
-    flex-direction: column;
-    height: 100%;
     width: 50%;
-}
-
-
-
-ul,
-li {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-ul.slider1,
-ul.slider2 {
-    position: relative;
-    /*width: 800px;*//*comentario para hacer la imagen mas pequeña*/
-    width: 100%;
-    height: 200px;/*comentado para los cambios de hacer la foto mas pequeña*/
-    
-}
-
-/*formato del contenedor de la imagen que se muestra en el slider*/
-ul.slider1 li,
-ul.slider2 li {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    opacity: 0;
-   /* width: 800px;*//*comentado para hacer los cambios de la foto mas pequeña*/
-   width: 100%;
-    height: 170px;
-    transition: opacity .5s;
-    text-align: center;
-}
-
-/*formato de la imagen que se muestra en el slider*/
-ul.slider1 li img,
-ul.slider2 li img {
-    width: 100%;
     height: 100%;
-    
-    max-width: 800px;
-    
-    border-radius: 40px;
-    object-fit: cover;
-    /*Modifica el tamaño del elemento remplazado para llenar el cuadro de contenido. El objeto completo ocupará todo el espacio de la caja. Si el tamaño del elemento no concuerda con el de su caja, se estirará para llenarlo*/
-}
-
-ul.slider1 li:first-child,
-ul.slider2 li:first-child {
-    opacity: 1;
-    /*Mostramos el primer <li>*/
-}
-
-ul.slider1 li:target,
-ul.slider2 li:target {
-    opacity: 1;
-    /*Mostramos el <li> del enlace que pulsemos*/
-}
-
-.menu1,
-.menu2 {
-    text-align: center;
-    margin: 5px;
-}
-
-.menu1 li,
-.menu2 li {
-    display: inline-block;
-    text-align: center;
-}
-
-.menu1 li a,
-.menu2 li a {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    background-color: #8CECD7;
-    padding: 10px;
-    width: 20px;
-    height: 20px;
-    font-size: 20px;
-    border-radius: 100%;
-}
-
-.menu1 li a:hover,
-.menu2 li a:hover {
-    background-color: #F7B787;
-}
-
-/* fin primer slider .................................................*/
-
-
-
-
-
-
-/*slider tercero, lo ponemos aparte porque no es exactamente igual que el otro, aqui cambia tanto la imagen como el texto*/
-
-
-/*Slider 3: nuestros valores .........................................................*/
-
-.container3 {
-    /*height: 400px;   */
-   /* height: 120%; /* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
-    
-}
-
-ul.slider3 {
-    position: relative;
-   /* width: 800px;*/width: 100%;
-   /* height: 290px;*/ /*height: 25vh;/* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
-   /*aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
-   height: 55vh;
-    /*padding-bottom: 10px;*//***************** bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb*/
-}
-
-/*formato del contenedor de la imagen que se muestra en el slider*/
-ul.slider3 li {
-    position: absolute;  /*le datos a todos los li la misma posicion para que al cambiar la imagen cambien en el mismo sitio*/
-    left: 0px;
-    top: 0px;
-    opacity: 0;
-   /* width: inherit;*/
-   /* height: 250px;/* mmmmmmmmmmmmmmmmmmmmmmmbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb ????????mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
-    height: 30vh;
-
-    transition: opacity 0.5s;
-    color: rgba(0, 0, 0, 0);
-    /*texto transparente*/
-    /* background-color: red;*/
-    text-align: center;
-    width: 100%;
- 
-   
-
-}
-
-ul.slider3 li p{
-    text-align: left;
-    
-    margin-left: 10%;/* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
-    /*padding-bottom: 20px;*/
-    
-}
-
-/*formato de la imagen que se muestra en el slider*/
-ul.slider3 li img {
-   /* width: 100%;
-    height: 170px;*/
-    border-radius: 40px;
-    object-fit: cover;
-
-    width: 100%;
-    height: 100%;
-    
-    max-width: 800px;
-
-
-}
-
-ul.slider3 li:first-child {
-    opacity: 1;
-    /*Mostramos el primer <li>, es decir la primera imagen*/
-    /*color: rgba(0, 0, 0, 0);/*texto transparente*/
-}
-
-ul.slider3 li:target {
-    opacity: 1;
-    /*Mostramos el <li> del enlace que pulsemos*/
-    
-}
-
-ul.slider3 li:target p {
-    color: white;
-    /*Mostramos el texto del <li> del enlace que pulsemos*/
-}
-
-
-
-.menu3 {
-    text-align: center;
-    margin: 10px;
-    z-index: 999;
-    
-    margin-top:5%; /* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
-    position: absolute; /*relative*/
-}
-
-.menu3 li {
-   display: inline-block;
-    
-    text-align: center;
-}
-
-.menu3 li a {
-   display: flex;
-   
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    background-color: #29ADB2;/* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
-    border: solid 2px #8cecd7bb;/* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
-    padding: 9px;/* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
-    width: 60px;/* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
-    height: 5px;/* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
-    font-size: 20px;/* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
-    border-radius: 15%;/* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
-
-
-    transition: 0.5s linear;/* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
-
-    
-}
-
-.menu3 li a:hover {
-    background-color: #F7B787;
-
-    /*-webkit-box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);*/
-    box-shadow: 10px 10px 14px 2px rgba(2, 23, 51, 0.747);  /* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
-
-
-}
-
-.menu3 li a:hover + ul.slider3 li img{
-    border: 22px solid #8cecd7bb;
-    
+    min-width: 256px;
 }
 
 #tituloApartados {
@@ -727,47 +518,7 @@ ul.slider3 li:target p {
     text-align: center;
 }
 
-.box3Text {
-    font-size: 20px;
-}
-
-/*  .................................................*/
-
-/* fin cambios de María ............................................................*/
-
-/* prueba texto oculto.......................*/
-/*.oculto{
-    display: none;
-}
-
-.leerMas:hover ~ .box1Text p
-{
-    display: none;
-
-    
-}
-.leerMas:hover ~ .box1Text .oculto{
-    display: block;
-}
-
-...........................................*/
-
-/*#radio1, #radio2, #radio3{
-    visibility: hidden;
-}*/
-
-/* text format................... */
-
-.box1Text p {
-    text-align: left;
-    padding-top: 10px;
-    padding-left: 60px;
-    padding-right: 40px;
-    margin-left: 40px;
-    color: white;
-}
-
-.textFormat{
+.textFormat {
     color: #FFF;
     text-shadow: 1px 4px 4px rgba(0, 0, 0, 0.54);
     font-family: Outfit;
@@ -779,117 +530,76 @@ ul.slider3 li:target p {
     letter-spacing: 1.6px;
 }
 
-.backText{
-    background-color: #201e1c3d;
-    margin-right: 10px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-.backText2{
-    background-color: #201e1c3d;
-    padding-left: 20px;
-    padding-bottom: 40px;
-    padding-top: 20px;
-    padding-right: 20px;
-    margin-right:40px;
-    margin-left: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-.backTextM{ /************************************************************************************************************************/
+.backTextM {
     background-color: #201e1c3d;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     text-align: center;
-    font-size: 20px;
-    color: white;
-
 }
 
-.backTextM3{ /****************************bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb*********************************************/
-    background-color: #201e1c3d;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    text-align: center;
-    font-size: 20px;
-    color: white;
-
-}
-
-.subtitle{
-    
-    font-size: 21px;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-/* end Text Format...........................................*/
-
-.arrow{
-    width: 50px;
-    height: 50px;
-}
-
-.arrowImage{  /* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
-    display: flex;
-    width: 50%;
-   /* background-color: #EE7214;*/
-    align-self: center;
-   justify-self: center;
-}
-
-
-#slide2a:checked ~ #slider2 #slide2a img,
-        #slide2b:checked ~ #slider2 #slide2b img,
-        #slide2c:checked ~ #slider2 #slide2c img {
-            filter: grayscale(100%);
-        }
-
-/* carrusel seccion Nuestra mision, controlar dimensiones*/ /* bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb*/
-#carousel1{
+#carousel {
     /*establecer medidas del contenedor de la imagen ya que esta se ajuta a su contenedor*/
-    width: 70%;
-   /* height: 400px;*/
+    width: 80%;
     align-self: center;
     margin-left: auto;
     margin-right: auto;
 }
 
-#carouselExample{
-    width: 60%;
-    height: 60%;
-   align-self: center;
-   justify-content: center;
-
-   margin-left: auto;
-   margin-right: auto;
+#carouselExample {
+    width: 50%;
+    height: auto;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* carrusel seccion Nuestros Valores, controlar dimensiones*/
-#carousel3{
+#carousel3 {
     /*establecer medidas del contenedor de la imagen ya que esta se ajuta a su contenedor*/
     width: 80%;
-   /* height: 400px;*/
     align-self: center;
     margin-left: auto;
     margin-right: auto;
 }
 
-#carouselExample3{
-    
+#carouselExample3 {
     width: 100%;
-    height: 60%;
-   align-self: center;
-   justify-content: center;
-
-   margin-left: auto;
-   margin-right: auto;
+    height: auto;
+    align-self: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-
-.carousel-item img{
+.carousel-item img {
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
 }
+
+.containerRight {
+    padding: 20px;
+    margin: auto;
+    display: block;
+
+    width: 100%;
+}
+
+.containerLeft img {
+    border-radius: 40px;
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.containerLeft {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
