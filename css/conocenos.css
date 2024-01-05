@@ -2,13 +2,13 @@
 
 * {
     font-family: 'Outfit', sans-serif;
-    /* box-sizing: border-box;*/
+   /* box-sizing: border-box;*/
     margin: 0;
 }
 
 body {
     padding: 46px 89px 0 89px;
-    /* height: 100vh;*/
+   /* height: 100vh;*/
     background: radial-gradient(circle at 71% 100%, rgba(247, 183, 135, 1) 11%, rgba(7, 102, 173, 1) 58%, rgba(41, 173, 178, 1) 93%);
 }
 
@@ -17,22 +17,21 @@ body {
 html {
     height: auto;
     min-height: 100%;
-
+    
 }
-
 .body2 {
     padding: 46px 89px 0 89px;
-    /*  background: radial-gradient(circle at 71% 100%, rgba(247, 183, 135, 1) 11%, rgba(7, 102, 173, 1) 58%, rgba(41, 173, 178, 1) 93%);*/
+  /*  background: radial-gradient(circle at 71% 100%, rgba(247, 183, 135, 1) 11%, rgba(7, 102, 173, 1) 58%, rgba(41, 173, 178, 1) 93%);*/
 
     /*background-color: pink;*/
     /*con la dos siguientes lineas hacemos el body responsive*/
     min-height: 100%;
     height: auto;
-
+    
     margin-bottom: 0;
     padding-bottom: 0;
 
-    /*display: flex;
+     /*display: flex;
     flex-direction: column;*/
 }
 
@@ -168,7 +167,6 @@ header .navbar.mobile {
         font-weight: 500;
     }
 }
-
 /* ...hasta acá. */
 
 
@@ -280,7 +278,7 @@ main .items .item {
 footer {
     background-color: #ffffff;
     border-radius: 50px;
-    display: flex;
+    display:flex;
     align-items: center;
     height: 100px;
     color: #0766AD;
@@ -341,7 +339,7 @@ footer .logosRRSS {
 /* end footer .........................................................................................*/
 
 /* Upper menu .........................................................................................*/
-.menuSuperior {
+.menuSuperior{
     display: flex;
     justify-content: space-between;
 }
@@ -363,30 +361,25 @@ footer .logosRRSS {
 
 
 /* button 1 active*/
-#radio1:checked~.menuSuperior>#enlace1 {
+#radio1:checked ~ .menuSuperior>#enlace1 {
     background-color: #F7B787;
 }
-
 /* button 1 hover*/
 #enlace1:hover {
     background-color: #8CECD7;
 }
-
 /* button 2 active*/
 #radio2:checked~.menuSuperior>#enlace2 {
     background-color: #F7B787;
 }
-
 /* button 2 hover*/
 #enlace2:hover {
     background-color: #8CECD7;
 }
-
 /* button 3 active*/
 #radio3:checked~.menuSuperior>#enlace3 {
     background-color: #F7B787;
 }
-
 /* button 3 hover*/
 #enlace3:hover {
     background-color: #8CECD7;
@@ -397,42 +390,34 @@ footer .logosRRSS {
 #radio1:checked~.mainSectionNosotras {
     display: block;
 }
-
 /*hide section*/
 #radio1:checked~.mainSectionNuestraMision {
     display: none;
 }
-
 /*hide section*/
 #radio1:checked~.mainSectionNuestrosValores {
     display: none;
 }
-
 /*SEE section "Mision" and hide the rest*/
 #radio2:checked~.mainSectionNuestraMision {
     display: block;
 }
-
 /*hide section*/
 #radio2:checked~.mainSectionNosotras {
     display: none;
 }
-
 /*hide section*/
 #radio2:checked~.mainSectionNuestrosValores {
     display: none;
 }
-
 /*SEE section "Valores" and hide the rest*/
 #radio3:checked~.mainSectionNuestrosValores {
     display: block;
 }
-
 /*hide section*/
 #radio3:checked~.mainSectionNosotras {
     display: none;
 }
-
 /*hide section*/
 #radio3:checked~.mainSectionNuestraMision {
     display: none;
@@ -453,11 +438,13 @@ footer .logosRRSS {
     /*height: auto;*/
     /* background-color: rgb(41, 97, 219);*/
     background-color: rgba(255, 255, 255, 0.212);
+   
     border-radius: 40px;
     display: flex;
     flex-direction: column;
     width: 100%;
     /*height: 50vh; *//******************************************************************************************************************************/
+
     padding-bottom: 25px;
 }
 
@@ -466,10 +453,13 @@ footer .logosRRSS {
     display: none;
 }
 
-
+/*.mainSectionNuestraMision{
+    justify-content: 80vh;
+}*/
 
 /*Slider: nosotras y mision .........................................................*/
 .container1,
+
 .container3 {
     margin: auto;
     /* background-color: transparent;*/
@@ -477,22 +467,37 @@ footer .logosRRSS {
     padding-top: 25px;
 
     /*cambios para hacer más pequeña la foto*/
-    display: grid;
-    grid-template-rows: 80% 20%;
-    /*background-color: black;*/
+ /*   display: grid;
+    grid-template-rows: 80% 20%; aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+   /*background-color: black;*/
+   display:flex;
+    flex-direction: column;
     width: 100%;
-    height: 300px;
-    /* max-width: 700px;*/
+   
+    /* height: 300px;*//* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+    height: 100%;
+
+   /* max-width: 700px;*/
     min-width: 256px;
-
+    
     /*......................................*/
+    
 }
-
 .container2{ /* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
     display: flex;
     flex-direction: column;
     height: 100%;
 }
+
+
+.container3{ /* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaammmmmm*/
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+}
+
+
 
 ul,
 li {
@@ -504,11 +509,10 @@ li {
 ul.slider1,
 ul.slider2 {
     position: relative;
-    /*width: 800px;*/
-    /*comentario para hacer la imagen mas pequeña*/
+    /*width: 800px;*//*comentario para hacer la imagen mas pequeña*/
     width: 100%;
-    height: 200px;
-    /*comentado para los cambios de hacer la foto mas pequeña*/
+    height: 200px;/*comentado para los cambios de hacer la foto mas pequeña*/
+    
 }
 
 /*formato del contenedor de la imagen que se muestra en el slider*/
@@ -518,9 +522,8 @@ ul.slider2 li {
     left: 0px;
     top: 0px;
     opacity: 0;
-    /* width: 800px;*/
-    /*comentado para hacer los cambios de la foto mas pequeña*/
-    width: 100%;
+   /* width: 800px;*//*comentado para hacer los cambios de la foto mas pequeña*/
+   width: 100%;
     height: 170px;
     transition: opacity .5s;
     text-align: center;
@@ -531,9 +534,9 @@ ul.slider1 li img,
 ul.slider2 li img {
     width: 100%;
     height: 100%;
-
+    
     max-width: 800px;
-
+    
     border-radius: 40px;
     object-fit: cover;
     /*Modifica el tamaño del elemento remplazado para llenar el cuadro de contenido. El objeto completo ocupará todo el espacio de la caja. Si el tamaño del elemento no concuerda con el de su caja, se estirará para llenarlo*/
@@ -595,65 +598,73 @@ ul.slider2 li:target {
 
 .container3 {
     /*height: 400px;   */
-    height: 120%; /* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
+   /* height: 120%; /* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
+    
 }
 
 ul.slider3 {
     position: relative;
-    /* width: 800px;*/
-/* width: 800px;*/width: 100%;
-   /* height: 290px;*/ height: 25vh;/* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
-    padding-bottom: 100px;
+   /* width: 800px;*/width: 100%;
+   /* height: 290px;*/ /*height: 25vh;/* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
+   /*aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+   height: 55vh;
+    /*padding-bottom: 10px;*//***************** bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb*/
 }
 
 /*formato del contenedor de la imagen que se muestra en el slider*/
 ul.slider3 li {
-    position: absolute;
+    position: absolute;  /*le datos a todos los li la misma posicion para que al cambiar la imagen cambien en el mismo sitio*/
     left: 0px;
     top: 0px;
     opacity: 0;
-    /* width: inherit;*/
-    height: 170px;
-    height: 250px;/* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
-    transition: opacity .5s;
+   /* width: inherit;*/
+   /* height: 250px;/* mmmmmmmmmmmmmmmmmmmmmmmbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb ????????mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
+    height: 30vh;
+
+    transition: opacity 0.5s;
     color: rgba(0, 0, 0, 0);
     /*texto transparente*/
     /* background-color: red;*/
     text-align: center;
     width: 100%;
+ 
+   
 
 }
 
-ul.slider3 li p {
+ul.slider3 li p{
     text-align: left;
-
+    
     margin-left: 10%;/* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
     /*padding-bottom: 20px;*/
-
+    
 }
 
 /*formato de la imagen que se muestra en el slider*/
 ul.slider3 li img {
-    /* width: 100%;
+   /* width: 100%;
     height: 170px;*/
     border-radius: 40px;
     object-fit: cover;
 
     width: 100%;
     height: 100%;
-
+    
     max-width: 800px;
+
+
 }
 
 ul.slider3 li:first-child {
     opacity: 1;
-    /*Mostramos el primer <li>*/
+    /*Mostramos el primer <li>, es decir la primera imagen*/
     /*color: rgba(0, 0, 0, 0);/*texto transparente*/
 }
 
 ul.slider3 li:target {
     opacity: 1;
     /*Mostramos el <li> del enlace que pulsemos*/
+    
 }
 
 ul.slider3 li:target p {
@@ -661,38 +672,54 @@ ul.slider3 li:target p {
     /*Mostramos el texto del <li> del enlace que pulsemos*/
 }
 
+
+
 .menu3 {
     text-align: center;
     margin: 10px;
     z-index: 999;
-
+    
     margin-top:5%; /* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
-    position: relative;
+    position: absolute; /*relative*/
 }
 
 .menu3 li {
-    display: inline-block;
+   display: inline-block;
+    
     text-align: center;
 }
 
 .menu3 li a {
-    display: inline-block;
+   display: flex;
+   
     color: rgb(255, 255, 255);
     text-decoration: none;
-    background-color: #29ADB2;
+    background-color: #29ADB2;/* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
     border: solid 2px #8cecd7bb;/* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
-    padding: 9px;
-    width: 60px;
-    height: 5px;
-    font-size: 20px;
-    border-radius: 15%;
+    padding: 9px;/* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
+    width: 60px;/* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
+    height: 5px;/* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
+    font-size: 20px;/* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
+    border-radius: 15%;/* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
+
 
     transition: 0.5s linear;/* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
+
+    
 }
 
 .menu3 li a:hover {
     background-color: #F7B787;
+
+    /*-webkit-box-shadow: 10px 10px 14px 2px rgba(0,0,0,0.47);*/
     box-shadow: 10px 10px 14px 2px rgba(2, 23, 51, 0.747);  /* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
+
+
+}
+
+.menu3 li a:hover + ul.slider3 li img{
+    border: 22px solid #8cecd7bb;
+    
 }
 
 #tituloApartados {
@@ -740,7 +767,7 @@ ul.slider3 li:target p {
     color: white;
 }
 
-.textFormat {
+.textFormat{
     color: #FFF;
     text-shadow: 1px 4px 4px rgba(0, 0, 0, 0.54);
     font-family: Outfit;
@@ -752,30 +779,23 @@ ul.slider3 li:target p {
     letter-spacing: 1.6px;
 }
 
-.backText {
+.backText{
     background-color: #201e1c3d;
     margin-right: 10px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 
-.backText2 {
+.backText2{
     background-color: #201e1c3d;
     padding-left: 20px;
     padding-bottom: 40px;
     padding-top: 20px;
     padding-right: 20px;
-    margin-right: 40px;
+    margin-right:40px;
     margin-left: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-}
-
-.subtitle {
-
-    font-size: 21px;
-    text-align: center;
-    margin-bottom: 10px;
 }
 
 .backTextM{ /************************************************************************************************************************/
@@ -788,26 +808,88 @@ ul.slider3 li:target p {
 
 }
 
+.backTextM3{ /****************************bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb*********************************************/
+    background-color: #201e1c3d;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+
+}
+
+.subtitle{
+    
+    font-size: 21px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 /* end Text Format...........................................*/
 
-/* carrusel nuestra mision*/
-#carousel1 {
+.arrow{
+    width: 50px;
+    height: 50px;
+}
+
+.arrowImage{  /* mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm*/
+    display: flex;
+    width: 50%;
+   /* background-color: #EE7214;*/
+    align-self: center;
+   justify-self: center;
+}
+
+
+#slide2a:checked ~ #slider2 #slide2a img,
+        #slide2b:checked ~ #slider2 #slide2b img,
+        #slide2c:checked ~ #slider2 #slide2c img {
+            filter: grayscale(100%);
+        }
+
+/* carrusel seccion Nuestra mision, controlar dimensiones*/ /* bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb*/
+#carousel1{
+    /*establecer medidas del contenedor de la imagen ya que esta se ajuta a su contenedor*/
+    width: 70%;
+   /* height: 400px;*/
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#carouselExample{
+    width: 60%;
+    height: 60%;
+   align-self: center;
+   justify-content: center;
+
+   margin-left: auto;
+   margin-right: auto;
+}
+
+/* carrusel seccion Nuestros Valores, controlar dimensiones*/
+#carousel3{
     /*establecer medidas del contenedor de la imagen ya que esta se ajuta a su contenedor*/
     width: 80%;
+   /* height: 400px;*/
     align-self: center;
     margin-left: auto;
     margin-right: auto;
 }
 
-#carouselExample {
-
-    width: 80%;
+#carouselExample3{
+    
+    width: 100%;
     height: 60%;
-    align-self: center;
-    justify-content: center;
+   align-self: center;
+   justify-content: center;
 
-    margin-left: auto;
-    margin-right: auto;
+   margin-left: auto;
+   margin-right: auto;
 }
 
-/*........................*/
+
+.carousel-item img{
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
