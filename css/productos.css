@@ -74,6 +74,7 @@ header .navbar {
 header .navbar ul {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     box-sizing: border-box;
     padding-left: 0;
@@ -94,14 +95,57 @@ header .navbar a {
     margin-right: 20px;
 }
 
-header .navbar a:hover {
+/*  CAMBIOS DESDE ACÁ  */
+
+/* Hover underline del header */
+header .navbar.desktop a:hover {
     color: #EE7214;
 }
+
+header .navbar.desktop .hover_underline_animation {
+    display: inline-block;
+    position: relative;
+    color: #0766AD;
+}
+
+header .navbar.desktop .hover_underline_animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0766AD;
+    transform-origin: bottom right;
+    transition: transform 0.35s ease-out;
+}
+   
+header .navbar.desktop .hover_underline_animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+header .navbar a:visited {
+    color: #0766AD;
+}
+
+/* Active Page */
+header .navbar.desktop .active_page {
+    text-decoration: underline #EE7214;
+    text-decoration-thickness: 2px;
+}
+
+header .navbar.desktop .active_page:hover {
+    text-decoration: underline #0766AD;
+    text-decoration-thickness: 2px;
+}
+
+/*  CAMBIOS HASTA ACÁ  */
 
 header .navbar.mobile {
     display: none;
 }
-
 
 @media screen and (max-width:420px) {
     body {
@@ -172,7 +216,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 25px 0;
+    padding: 25px 0 30px 0;
 }
 
 main .items {
@@ -191,6 +235,10 @@ main .items .item {
     padding: 20px;
     border-radius: 52px;
     font-size: large;
+}
+
+main .items .item:hover {
+    transform: translateY(-15px);
 }
 
 main h1,
