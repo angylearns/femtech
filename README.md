@@ -5,7 +5,7 @@
 
 ## Descripción del Proyecto
 
-Propuesta de una página de *landing page* para **FemTech Innovations**, una startup liderada por mujeres que se especializa en la comercialización de dispositivos móviles reacondicionados. 
+Propuesta de *landing page* para **FemTech Innovations**, una startup liderada por mujeres que se especializa en la comercialización de dispositivos móviles reacondicionados. 
 
 Esta página tiene como objetivo principal atraer a clientela amante de la tecnología y preocupada por el medio ambiente, resaltando la calidad, asequibilidad y sostenibilidad de los productos de tecnología punta de FemTech Innovations. 
 
