@@ -233,7 +233,13 @@ body {
         font-size: 1.1em;
         color: rgb(255, 255, 255);
     }
+
+    .facebook, .instagram, .twitter{
+        width: 30px; /* Ajusta el tamaño para pantallas más pequeñas */
+        height: 30px; 
+    }
 }
+
 
 @media screen and (min-width: 600px) {
     body {
@@ -253,6 +259,11 @@ body {
     .titulo1 {
         font-size: 2em;
         color: white;
+    }
+
+    .facebook, .instagram, .twitter{
+        width: 50px; /* Ajusta el tamaño para pantallas más pequeñas */
+        height: 50px; 
     }
 }
 
@@ -417,6 +428,7 @@ header .navbar.mobile {
         color: #8CECD7;
         font-weight: 500;
     }
+  
 }
 
 /* ...hasta acá. */
@@ -450,41 +462,21 @@ footer .logosRRSS {
     justify-content: space-between;
     text-align: left;
     gap: 10px;
-    margin-left: 100px;
-}
-
-/*set icons measure*/
-.facebook,
-.twitter,
-.instagram {
-    width: 50px;
-    height: 50px;
-}
-
-/*default values*/
-.facebook {
-    background-image: url("../img/rrss/facebook.svg");
-}
-
-.twitter {
-    background-image: url("../img/rrss/twitter.svg");
-}
-
-.instagram {
-    background-image: url("../img/rrss/instagram.svg");
+    margin-left: 150px;
 }
 
 /*footer images hover*/
 .facebook:hover {
-    background-image: url("../img/rrss/facebook2.svg");
+   
+    content: url("/img/rrss/facebook2.svg");
 }
 
 .twitter:hover {
-    background-image: url("../img/rrss/twitter2.svg");
+    content: url("/img/rrss/twitter2.svg");
 }
 
 .instagram:hover {
-    background-image: url("../img/rrss/instagram2.svg");
+    content: url("/img/rrss/instagram2.svg");
 }
 
 /* end footer .........................................................................................*/
@@ -523,7 +515,6 @@ footer .logosRRSS {
 
 }
 
-
 .container1 {
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
@@ -543,14 +534,12 @@ footer .logosRRSS {
     margin: auto;
 }
 
-
 .container3 {
     margin: auto;
     padding-top: 25px;
     display: flex;
     flex-direction: column;
     width: 50%;
-    height: 100%;
     min-width: 180px;
 }
 
@@ -622,4 +611,59 @@ footer .logosRRSS {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
+
+
+/*efecto en la foto de quienes somos*/
+.card {
+    width:fit-content;
+    height: auto;
+    transition: all 0.2s;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .card-inner {
+    width: inherit;
+    height: inherit;
+    box-shadow: 0 0 10px #f7b887;
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+  }
+  
+  .card:hover {
+    transform: scale(1.04) rotate(1deg);
+  }
+  
+  .circle {
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(#0766AD, #29ADB2);
+    border-radius: 50%;
+    position: absolute;
+    animation: move-up6 1.5s ease-in infinite alternate-reverse;
+  }
+  
+  .circle:nth-child(1) {
+    top: -30px;
+    left: -30px;
+  }
+  
+  .circle:nth-child(2) {
+    bottom: -20px;
+    right: -20px;
+    animation-name: move-down1;
+  }
+  
+  @keyframes move-up6 {
+    to {
+      transform: translateX(-30px);
+    }
+  }
+  
+  @keyframes move-down1 {
+    to {
+      transform: translateX(30px);
+    }
+  }
