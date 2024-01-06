@@ -5,7 +5,13 @@
 
 ## Descripción del Proyecto
 
-Este proyecto es el primer trabajo (12/2023 - 01/2024) del Bootcamp Full Stack Fem Coders F5 (Asociación Arrabal & Factoría F5): una *landing page* para una empresa que vende tecnología reacondicionada.
+Propuesta de una página de *landing page* para **FemTech Innovations**, una startup liderada por mujeres que se especializa en la comercialización de dispositivos móviles reacondicionados. 
+
+Esta página tiene como objetivo principal atraer a clientela amante de la tecnología y preocupada por el medio ambiente, resaltando la calidad, asequibilidad y sostenibilidad de los productos de tecnología punta de FemTech Innovations. 
+
+La propuesta busca transmitir visualmente los valores fundamentales de la empresa y motivar a los visitantes a explorar y adquirir sus innovadores dispositivos reacondicionados.
+
+Este proyecto es el primer trabajo (12/2023 - 01/2024) del Bootcamp Full Stack Fem Coders F5 (Asociación Arrabal & Factoría F5), diseñado y desarrollado por el Grupo 3.
 
 ## Estado del Proyecto
 
