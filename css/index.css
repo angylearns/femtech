@@ -8,6 +8,7 @@
 
 #home_body {
     height: 100vh;
+    width:
 }
 
 .home {
@@ -299,16 +300,16 @@ header .navbar.mobile {
     border-radius: 50%;
 }
 
-#bottom-page{
-        position: relative;
-        display: flex;
-        justify-content: center; 
-        background-image: url(/img/home/curve-background.png);
-        background-position-y: -15%;
-        background-size: cover;
-        height: 100vh;
-        width: 100%;
-        background-repeat: no-repeat;
+#bottom-page {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-image: url(/img/home/curve-background.png);
+    background-position-y: -15%;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
 }
 
 
@@ -370,31 +371,25 @@ header .navbar.mobile {
 
 }
 
-
-
-
-/* Footer .....................................................................................*/
-
+/* Footer Inicio .....................................................................................*/
 footer {
     background-color: #ffffff;
     border-radius: 50px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     height: 100px;
     color: #0766AD;
     font-weight: bold;
-    position: absolute;
-    bottom: 50px;
-    margin-left: 89px;
-    width: 1260px;
-
-    /* width: 100%;*/
+    /*footer position at the end of the page*/
+    position: relative;
+    bottom: 0;
+    padding-right: 300px;
+    margin: 70px 40px 0px 40px
 }
 
 footer .copyright {
     width: 75%;
-    margin-left: 50px;
+    margin-left: 25px;
 }
 
 footer .logosRRSS {
@@ -402,48 +397,25 @@ footer .logosRRSS {
     justify-content: space-between;
     text-align: left;
     gap: 10px;
-    margin-left: 100px;
-}
-
-/*set icons measure*/
-.facebook,
-.twitter,
-.instagram {
-    width: 50px;
-    height: 50px;
-}
-
-.logosRRSS {
-    padding-right: 100px
-}
-
-/*default values*/
-.facebook {
-    background-image: url("../img/rrss/facebook.svg");
-}
-
-.twitter {
-    background-image: url("../img/rrss/twitter.svg");
-}
-
-.instagram {
-    background-image: url("../img/rrss/instagram.svg");
+    margin-left: 150px;
 }
 
 /*footer images hover*/
 .facebook:hover {
-    background-image: url("../img/rrss/facebook2.svg");
+
+    content: url("/img/rrss/facebook2.svg");
 }
 
 .twitter:hover {
-    background-image: url("../img/rrss/twitter2.svg");
+    content: url("/img/rrss/twitter2.svg");
 }
 
 .instagram:hover {
-    background-image: url("../img/rrss/instagram2.svg");
+    content: url("/img/rrss/instagram2.svg");
 }
 
 /* end footer .........................................................................................*/
+
 
 
 /*Responsive TOP HOME...........................................................................................*/
@@ -531,6 +503,11 @@ footer .logosRRSS {
 
 
 @media screen and (max-width: 430px) {
+
+    .home-body {
+        width: 100vh;
+    }
+
     .top {
         position: relative;
     }
@@ -586,49 +563,71 @@ footer .logosRRSS {
 @media screen and (max-width: 430px) {
     .bottom {
         height: auto;
+        width: 100vh;
     }
 
     .main_bottom-page_home {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 300px
+        margin-top: 800px;
+        
+    }
+
+    #bottom-page {
+        background-image: url(/img/home/background-mobile.png);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        background-size: cover;
     }
 
     .review {
         width: 276px;
-        height: 380px;
+        height: 400px;
         margin: 50px
-
     }
 
     .user-name {
         padding-bottom: 15px;
     }
-    
+
     .five-stars {
         padding: 0px 0px 15px 45px;
-        margin
-        width: 60px;
-        height: 30px;
-        margin-top:-15px;
-    }
     
+        margin-top: -15px;
+    }
+
     .customer_photos {
-    width:45px;
-    height:45px;
-    flex-shrink:0;
+        width: 45px;
+        height: 45px;
+        flex-shrink: 0;
         margin-right: 20px;
         margin-bottom: 30px
     }
-    
+
     .reviews-text {
         font-size: 13px;
-        flex-shrink:0;
-        line-height:10px;
+        flex-shrink: 0;
+        line-height: 30px;
         margin-top: 0px;
     }
-    
+
+    .facebook,
+    .instagram,
+    .twitter {
+        width: 30px;
+        /* Ajusta el tamaño para pantallas más pequeñas */
+        height: 30px;
+    }
+
+    .facebook,
+    .instagram,
+    .twitter {
+        width: 50px;
+        /* Ajusta el tamaño para pantallas más pequeñas */
+        height: 50px;
+    }
 }
 
 /*FIN de responsive TOP HOME...........................................................................................*/
