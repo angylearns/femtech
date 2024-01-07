@@ -1,0 +1,633 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Outfit', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#home_body {
+    height: 100vh;
+    width:
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Home top page .....................................................................................*/
+.top {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: radial-gradient(circle at 71% 100%, rgba(247, 183, 135, 1) 11%, rgba(7, 102, 173, 1) 58%, rgba(41, 173, 178, 1) 93%);
+}
+
+
+/* Header desde acá... */
+header {
+    background-color: #ffffff;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    color: #0766AD;
+    font-weight: bold;
+    margin-right: 89px;
+    margin-left: 89px;
+    margin-top: -50px;
+}
+
+header .image_logo a {
+    height: 92px;
+    display: flex;
+    align-items: center;
+}
+
+header .image_logo .logo--desktop {
+    border-radius: 50px 0 0 50px;
+    max-height: 80%;
+    width: auto;
+}
+
+header .image_logo .logo--mobile {
+    display: none;
+}
+
+header .navbar {
+    width: 30%;
+    display: block;
+    position: static;
+    background-color: transparent;
+    padding-top: 30px;
+    ;
+}
+
+header .navbar ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding-left: 0;
+}
+
+header .navbar ul li {
+    list-style: none;
+}
+
+header .toggle_menu,
+header .menu_icon {
+    display: none;
+}
+
+header .navbar a {
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+header .navbar a:hover {
+    color: #EE7214;
+}
+
+/* Hover underline del header */
+header .navbar.desktop a:hover {
+    color: #EE7214;
+}
+
+header .navbar.desktop .hover_underline_animation {
+    display: inline-block;
+    position: relative;
+    color: #0766AD;
+}
+
+header .navbar.desktop .hover_underline_animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0766AD;
+    transform-origin: bottom right;
+    transition: transform 0.35s ease-out;
+}
+
+header .navbar.desktop .hover_underline_animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+header .navbar a:visited {
+    color: #0766AD;
+}
+
+/* Active Page */
+header .navbar.desktop .active_page {
+    text-decoration: underline #EE7214;
+    text-decoration-thickness: 2px;
+}
+
+header .navbar.desktop .active_page:hover {
+    text-decoration: underline #0766AD;
+    text-decoration-thickness: 2px;
+}
+
+/*  CAMBIOS HASTA ACÁ  */
+
+header .navbar.mobile {
+    display: none;
+}
+
+
+@media screen and (max-width:431px) {
+    body {
+        padding: 0px 0px;
+    }
+
+    header .image_logo .logo--desktop,
+    header .navbar.desktop {
+        display: none;
+    }
+
+    header .image_logo .logo--mobile {
+        display: block;
+        border-radius: 50px;
+        max-height: 80%;
+    }
+
+    header .menu_icon {
+        display: block;
+        font-size: xx-large;
+    }
+
+    header .navbar.mobile ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header .navbar.mobile li {
+        text-align: center;
+    }
+
+    header .navbar.mobile li a {
+        margin: 0;
+    }
+
+    header .toggle_menu:checked~.navbar.mobile {
+        background-color: #145659;
+        border-radius: 50px;
+        display: block;
+        position: absolute;
+        top: 115px;
+        right: 50px;
+        height: 200px;
+        min-width: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header .toggle_menu:checked~.navbar.mobile ul {
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+        margin: 0;
+        height: 70%;
+        min-width: auto;
+    }
+
+    header .toggle_menu:checked~.navbar.mobile ul li a {
+        color: #8CECD7;
+        font-weight: 500;
+    }
+}
+
+/* ...hasta acá. */
+
+
+.home_main_top-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20hv;
+}
+
+.left-home_main_top-page {
+    padding-left: 212px;
+    padding-top: 100px;
+}
+
+.title {
+    color: #FFF;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 60px;
+    /* 125% */
+}
+
+.slogan {
+    color: #FFF;
+    font-family: Outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 60px;
+    /* 325% */
+}
+
+.floating-iphones-1 {
+    width: 86.7vh;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.floating-iphones-1-image {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.Reviews-button {
+    background-color: #8CECD7;
+    border-radius: 100%;
+    width: 200px;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: 120px;
+    padding-top: 10px;
+    overflow: hidden;
+}
+
+.reviews-button-text {
+    color: #29ADB2;
+    font-family: Outfit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 900;
+    text-decoration: none;
+    padding-bottom: 10px;
+    /* 214.286% */
+}
+
+.Reviews-button:hover {
+    background-color: #F7B787;
+    color: #EE7214;
+}
+
+
+
+/* End of home top page .....................................................................................*/
+
+/*Bottom page....................................................................................*/
+
+.customer_photos {
+    width: 8.2vh;
+    height: 8.2vh;
+    border-radius: 50%;
+}
+
+#bottom-page {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-image: url(/img/home/curve-background.png);
+    background-position-y: -15%;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+
+.main_bottom-page_home {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.review {
+    width: 292px;
+    height: 443px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: #29ADB2;
+}
+
+.review:hover {
+    transform: translateY(-15px);
+    /* Mueve la reseña hacia arriba */
+}
+
+.user-name {
+    color: #0766AD;
+    font-family: Outfit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    /* 214.286% */
+}
+
+.five-stars {
+    padding: 0px 0px 15px 45px
+}
+
+.customer-and-name {
+    display: flex;
+    align-items: center;
+    padding: 30px 30px 0px 50px
+}
+
+.customer_photos {
+    margin-right: 20px;
+    margin-bottom: 30px
+}
+
+.reviews-text {
+    width: 250px;
+    height: 348px;
+    padding-left: 50px;
+    color: #FFF;
+    font-family: Outfit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    /* 214.286% */
+
+}
+
+/* Footer Inicio .....................................................................................*/
+footer {
+    background-color: #ffffff;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    color: #0766AD;
+    font-weight: bold;
+    /*footer position at the end of the page*/
+    position: relative;
+    bottom: 0;
+    padding-right: 300px;
+    margin: 70px 40px 0px 40px
+}
+
+footer .copyright {
+    width: 75%;
+    margin-left: 25px;
+}
+
+footer .logosRRSS {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    gap: 10px;
+    margin-left: 150px;
+}
+
+/*footer images hover*/
+.facebook:hover {
+
+    content: url("/img/rrss/facebook2.svg");
+}
+
+.twitter:hover {
+    content: url("/img/rrss/twitter2.svg");
+}
+
+.instagram:hover {
+    content: url("/img/rrss/instagram2.svg");
+}
+
+/* end footer .........................................................................................*/
+
+
+
+/*Responsive TOP HOME...........................................................................................*/
+@media screen and (max-width: 1290px) {
+    .home_main_top-page {
+        flex-direction: column;
+        /* Cambiar a columna en móvil */
+
+    }
+
+    .floating-iphones-1-image {
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    .title {
+        font-size: 60px;
+    }
+
+    .slogan {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .home_main_top-page {
+        flex-direction: column;
+        /* Cambiar a columna en móvil */
+
+    }
+
+    .floating-iphones-1-image {
+        max-width: 80%;
+        max-height: 80%;
+    }
+
+    .title {
+        font-size: 50px;
+    }
+
+    .slogan {
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width: 730px) {
+    .home_main_top-page {
+        flex-direction: column;
+        /* Cambiar a columna en móvil */
+
+    }
+
+    .floating-iphones-1-image {
+        max-width: 60%;
+        max-height: 60%;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .slogan {
+        display: none;
+    }
+
+    .Reviews-button {
+        width: 174px;
+        height: 54px;
+        flex-shrink: 0;
+        border-radius: 30px;
+        background: #8CECD7;
+    }
+}
+
+@media screen and (max-width:580px) {
+    .Reviews-button {
+        width: 174px;
+        height: 54px;
+        flex-shrink: 0;
+        border-radius: 30px;
+        background: #8CECD7;
+    }
+}
+
+
+@media screen and (max-width: 430px) {
+
+    .home-body {
+        width: 100vh;
+    }
+
+    .top {
+        position: relative;
+    }
+
+    .home_main_top-page {
+        flex-direction: column;
+        /* Cambiar a columna en móvil */
+
+    }
+
+    header {
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+
+    .left-home_main_top-page {
+        display: flex;
+        width: 290px;
+        height: 174px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        font-size: 40px;
+        padding: 150px 0px 0px 0px;
+    }
+
+    .title {
+        display: flex;
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .slogan {
+        display: none;
+    }
+
+    .Reviews-button {
+        width: 174px;
+        height: 54px;
+        flex-shrink: 0;
+        border-radius: 30px;
+        background: #8CECD7;
+        position: absolute;
+        top: 800px;
+        left: 8px;
+    }
+}
+
+/*FIN de responsive TOP HOME...........................................................................................*/
+
+/*Responsive BOTTOM HOME...........................................................................................*/
+@media screen and (max-width: 430px) {
+    .bottom {
+        height: auto;
+        width: 100vh;
+    }
+
+    .main_bottom-page_home {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 800px;
+        
+    }
+
+    #bottom-page {
+        background-image: url(/img/home/background-mobile.png);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        background-size: cover;
+    }
+
+    .review {
+        width: 276px;
+        height: 400px;
+        margin: 50px
+    }
+
+    .user-name {
+        padding-bottom: 15px;
+    }
+
+    .five-stars {
+        padding: 0px 0px 15px 45px;
+    
+        margin-top: -15px;
+    }
+
+    .customer_photos {
+        width: 45px;
+        height: 45px;
+        flex-shrink: 0;
+        margin-right: 20px;
+        margin-bottom: 30px
+    }
+
+    .reviews-text {
+        font-size: 13px;
+        flex-shrink: 0;
+        line-height: 30px;
+        margin-top: 0px;
+    }
+
+    .facebook,
+    .instagram,
+    .twitter {
+        width: 30px;
+        /* Ajusta el tamaño para pantallas más pequeñas */
+        height: 30px;
+    }
+
+    .facebook,
+    .instagram,
+    .twitter {
+        width: 50px;
+        /* Ajusta el tamaño para pantallas más pequeñas */
+        height: 50px;
+    }
+}
+
+/*FIN de responsive TOP HOME...........................................................................................*/
