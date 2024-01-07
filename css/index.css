@@ -381,16 +381,13 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: auto;
     height: 100px;
     color: #0766AD;
     font-weight: bold;
-    /*footer position at the end of the page*/
     position: absolute;
     bottom: 50px;
-    /* margin-bottom: 5px;*/
     margin-left: 89px;
-    margin-right: 89px;
+    width: 1260px;
 
     /* width: 100%;*/
 }
@@ -600,10 +597,38 @@ footer .logosRRSS {
 
     .review {
         width: 276px;
-        height: 359px;
+        height: 380px;
         margin: 50px
 
     }
+
+    .user-name {
+        padding-bottom: 15px;
+    }
+    
+    .five-stars {
+        padding: 0px 0px 15px 45px;
+        margin
+        width: 60px;
+        height: 30px;
+        margin-top:-15px;
+    }
+    
+    .customer_photos {
+    width:45px;
+    height:45px;
+    flex-shrink:0;
+        margin-right: 20px;
+        margin-bottom: 30px
+    }
+    
+    .reviews-text {
+        font-size: 13px;
+        flex-shrink: 0;
+        line-height: 10px;
+        margin-top: 0px;
+    }
+    
 }
 
 /*FIN de responsive TOP HOME...........................................................................................*/
