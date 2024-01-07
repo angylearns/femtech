@@ -41,7 +41,8 @@ header {
 
 header .image_logo {
     height: 92px;
-    
+    pa
+
 }
 
 header .image_logo img {
@@ -59,8 +60,8 @@ header .navbar ul {
 
 header .navbar ul li {
     list-style: none;
-    
-} 
+
+}
 
 
 #principal {
@@ -82,20 +83,24 @@ header .navbar ul li {
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-   
+
 }
 
 #contenedorIzquierdoTop {
     /*imagen solo para pruebas pero no es definitiva*/
     background-image: url("../img/contacta/mujer_con_celular.jpg");
-    background-size: cover; /* tamaño de la imagen para cubrir todo el contenedor */
-    background-position: center; /* Centra la imagen  */
-    color: white; /* texto color blanco */
-    padding: 20px; /* Añade espacio interno para el contenido */
+    background-size: cover;
+    /* tamaño de la imagen para cubrir todo el contenedor */
+    background-position: center;
+    /* Centra la imagen  */
+    color: white;
+    /* texto color blanco */
+    padding: 20px;
+    /* Añade espacio interno para el contenido */
     align-items: center;
 }
 
-.botonform{
+.botonform {
     right: 30px;
     width: 132px;
     height: 53px;
@@ -104,55 +109,88 @@ header .navbar ul li {
     background: #8CECD7;
 }
 
-   /* para que el boton cambie de color cuando esta el mouse ensima,"hover"*/
-.cajita_boton{
+/* para que el boton cambie de color cuando esta el mouse ensima,"hover"*/
+.cajita_boton {
     display: flex;
-justify-content: flex-end;}
-#botonform:hover{
-    background-color: blue;
+    justify-content: flex-end;
+    border-radius: 70px;
+    right: 60px;
 }
 
-#contenedorDerecho{
+#botonform:hover {
+    background-color: blue;
 
-   /* background-color: pink;*/
+}
+
+#contenedorDerecho {
+
+    /* background-color: pink;*/
 }
 
 .form-control,
 #message {
-    border-radius: 20px;}
+    border-radius: 20px;
+}
 
-    footer {
-        background-color: #ffffff;
-        border-radius: 50px;
-        display:flex;
-        align-items: center;
-        height: 100px;
-        color: #0766AD;
-        font-weight: bold;
-        /*footer position at the end of the page*/
-        position: relative;
-        bottom: 0;
-        padding-right: 300px;
-    }
-    
-    footer .copyright {
-        width: 75%;
-        margin-left: 25px;
-    }
-    
-    footer .logosRRSS {
-        display: flex;
-        justify-content: space-between;
-        text-align: left;
-        gap: 10px;
-        margin-left: 100px;
-    }
-    
-    /*set icons measure*/
-    .facebook,
-    .twitter,
-    .instagram {
-        width: 50px;
-        height: 50px;
-    }
-    
+footer {
+    background-color: #ffffff;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    color: #0766AD;
+    font-weight: bold;
+    /*footer position at the end of the page*/
+    position: relative;
+    bottom: 0;
+    padding-right: 300px;
+}
+
+footer .copyright {
+    width: 75%;
+    margin-left: 25px;
+}
+
+footer .logocontacta {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    gap: 10px;
+    margin-left: 100px;
+}
+
+
+.facebook,
+.twitter,
+.instagram {
+    width: 50px;
+    height: 50px;
+}
+
+/*default values*/
+.facebook {
+    background-image: url("../img/contacta/facebook2.svg");
+}
+
+.twitter {
+    background-image: url("../img/contacta/twitter2.svg");
+}
+
+.instagram {
+    background-image: url("../img/contacta/instagram2.svg");
+}
+
+/*footer images hover*/
+.facebook:hover {
+    background-image: url("../img/contacta/facebook.svg");
+}
+
+.twitter:hover {
+    background-image: url("../img/contacta/twitter.svg");
+}
+
+.instagram:hover {
+    background-image: url("../img/contacta/instagram.svg");
+}
+
+/* end footer ....
