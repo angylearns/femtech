@@ -202,13 +202,29 @@ header .navbar.mobile {
 
 
 body {
-    padding: 46px 89px 0 89px;
+    
+   /* padding: 90% 10%;*/
     /*  height: 100vh;*/
     height: 100%;
     background: radial-gradient(circle at 71% 100%, rgba(247, 183, 135, 1) 11%, rgba(7, 102, 173, 1) 58%, rgba(41, 173, 178, 1) 93%);
     min-height: 100vh;
     /*font-size: 18px;*/
     color: white;
+}
+
+/*damos formato a height para que al agrandar o encoger la ventana y junto con las propiedades body2 nos muestre bien el fondo*/
+html {
+    height: auto;
+    min-height: 100%;
+}
+
+.body2 {    
+    min-height: 100%;
+    /*margin:50px;*/
+    padding: 20px 15px;
+    margin-bottom: 30px;
+    padding-bottom: 0px;
+
 }
 
 
@@ -262,7 +278,7 @@ body {
     }
 
     .facebook, .instagram, .twitter{
-        width: 50px; /* Ajusta el tamaño para pantallas más pequeñas */
+        width: 50px; 
         height: 50px; 
     }
 }
@@ -284,18 +300,6 @@ body {
 /* Fin Formatos de texto ......................................................................*/
 
 
-/*damos formato a height para que al agrandar o encoger la ventana y junto con las propiedades body2 nos muestre bien el fondo*/
-html {
-    height: auto;
-    min-height: 100%;
-}
-
-.body2 {
-    padding: 46px 89px 0 89px;
-    min-height: 100%;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
 
 
 /* HEADER */
