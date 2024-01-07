@@ -40,6 +40,7 @@ header {
     font-weight: bold;
     margin-right: 89px;
     margin-left: 89px;
+    margin-top: -50px;
 }
 
 header .image_logo a {
@@ -94,14 +95,60 @@ header .navbar a:hover {
     color: #EE7214;
 }
 
+/* Hover underline del header */
+header .navbar.desktop a:hover {
+    color: #EE7214;
+}
+
+header .navbar.desktop .hover_underline_animation {
+    display: inline-block;
+    position: relative;
+    color: #0766AD;
+}
+
+header .navbar.desktop .hover_underline_animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0766AD;
+    transform-origin: bottom right;
+    transition: transform 0.35s ease-out;
+}
+
+header .navbar.desktop .hover_underline_animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+header .navbar a:visited {
+    color: #0766AD;
+}
+
+/* Active Page */
+header .navbar.desktop .active_page {
+    text-decoration: underline #EE7214;
+    text-decoration-thickness: 2px;
+}
+
+header .navbar.desktop .active_page:hover {
+    text-decoration: underline #0766AD;
+    text-decoration-thickness: 2px;
+}
+
+/*  CAMBIOS HASTA ACÁ  */
+
 header .navbar.mobile {
     display: none;
 }
 
 
-@media screen and (max-width:420px) {
+@media screen and (max-width:431px) {
     body {
-        padding: 40px 30px;
+        padding: 0px 0px;
     }
 
     header .image_logo .logo--desktop,
@@ -182,7 +229,7 @@ header .navbar.mobile {
     font-size: 60px;
     font-style: normal;
     font-weight: 600;
-    line-height: 75px;
+    line-height: 60px;
     /* 125% */
 }
 
@@ -192,7 +239,7 @@ header .navbar.mobile {
     font-size: 20px;
     font-style: normal;
     font-weight: 300;
-    line-height: 65px;
+    line-height: 60px;
     /* 325% */
 }
 
@@ -221,6 +268,7 @@ header .navbar.mobile {
     flex-shrink: 0;
     margin-left: 120px;
     padding-top: 10px;
+    overflow: hidden;
 }
 
 .reviews-button-text {
@@ -234,6 +282,13 @@ header .navbar.mobile {
     /* 214.286% */
 }
 
+.Reviews-button:hover {
+    background-color: #F7B787;
+    color: #EE7214;
+}
+
+
+
 /* End of home top page .....................................................................................*/
 
 /*Bottom page....................................................................................*/
@@ -244,26 +299,21 @@ header .navbar.mobile {
     border-radius: 50%;
 }
 
-.bottom{
-    display:flex;
-    flex-direction: column;
+#bottom-page{
+        position: relative;
+        display: flex;
+        justify-content: center; 
+        background-image: url(/img/home/curve-background.png);
+        background-position-y: -15%;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        background-repeat: no-repeat;
 }
 
-.bottom-background {
-    background-image: url(/img/home/curve-background.png);
-    background-position-y: -20%;
-    background-size: cover;
-    height: 100vh;
-    /* Asegúrate de que ocupe el 100% del contenedor */
-    width: 100%;
-    /* Asegúrate de que ocupe el 100% del contenedor */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-repeat: no-repeat;
-}
 
 .main_bottom-page_home {
+    position: relative;
     display: flex;
     justify-content: space-evenly;
 }
@@ -279,6 +329,20 @@ header .navbar.mobile {
 .review:hover {
     transform: translateY(-15px);
     /* Mueve la reseña hacia arriba */
+}
+
+.user-name {
+    color: #0766AD;
+    font-family: Outfit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    /* 214.286% */
+}
+
+.five-stars {
+    padding: 0px 0px 15px 45px
 }
 
 .customer-and-name {
@@ -308,6 +372,7 @@ header .navbar.mobile {
 
 
 
+
 /* Footer .....................................................................................*/
 
 footer {
@@ -316,15 +381,16 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: auto;
     height: 100px;
     color: #0766AD;
     font-weight: bold;
     /*footer position at the end of the page*/
-    position: arelative;
-    bottom: 0;
+    position: absolute;
+    bottom: 50px;
     /* margin-bottom: 5px;*/
-    margin-right: 89px;
     margin-left: 89px;
+    margin-right: 89px;
 
     /* width: 100%;*/
 }
@@ -348,6 +414,10 @@ footer .logosRRSS {
 .instagram {
     width: 50px;
     height: 50px;
+}
+
+.logosRRSS {
+    padding-right: 100px
 }
 
 /*default values*/
@@ -377,3 +447,163 @@ footer .logosRRSS {
 }
 
 /* end footer .........................................................................................*/
+
+
+/*Responsive TOP HOME...........................................................................................*/
+@media screen and (max-width: 1290px) {
+    .home_main_top-page {
+        flex-direction: column;
+        /* Cambiar a columna en móvil */
+
+    }
+
+    .floating-iphones-1-image {
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    .title {
+        font-size: 60px;
+    }
+
+    .slogan {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .home_main_top-page {
+        flex-direction: column;
+        /* Cambiar a columna en móvil */
+
+    }
+
+    .floating-iphones-1-image {
+        max-width: 80%;
+        max-height: 80%;
+    }
+
+    .title {
+        font-size: 50px;
+    }
+
+    .slogan {
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (max-width: 730px) {
+    .home_main_top-page {
+        flex-direction: column;
+        /* Cambiar a columna en móvil */
+
+    }
+
+    .floating-iphones-1-image {
+        max-width: 60%;
+        max-height: 60%;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .slogan {
+        display: none;
+    }
+
+    .Reviews-button {
+        width: 174px;
+        height: 54px;
+        flex-shrink: 0;
+        border-radius: 30px;
+        background: #8CECD7;
+    }
+}
+
+@media screen and (max-width:580px) {
+    .Reviews-button {
+        width: 174px;
+        height: 54px;
+        flex-shrink: 0;
+        border-radius: 30px;
+        background: #8CECD7;
+    }
+}
+
+
+@media screen and (max-width: 430px) {
+    .top {
+        position: relative;
+    }
+
+    .home_main_top-page {
+        flex-direction: column;
+        /* Cambiar a columna en móvil */
+
+    }
+
+    header {
+        margin-left: 35px;
+        margin-right: 35px;
+    }
+
+    .left-home_main_top-page {
+        display: flex;
+        width: 290px;
+        height: 174px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        font-size: 40px;
+        padding: 150px 0px 0px 0px;
+    }
+
+    .title {
+        display: flex;
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .slogan {
+        display: none;
+    }
+
+    .Reviews-button {
+        width: 174px;
+        height: 54px;
+        flex-shrink: 0;
+        border-radius: 30px;
+        background: #8CECD7;
+        position: absolute;
+        top: 800px;
+        left: 8px;
+    }
+}
+
+/*FIN de responsive TOP HOME...........................................................................................*/
+
+/*Responsive BOTTOM HOME...........................................................................................*/
+@media screen and (max-width: 430px) {
+    .bottom {
+        height: auto;
+    }
+
+    .main_bottom-page_home {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 300px
+    }
+
+    .review {
+        width: 276px;
+        height: 359px;
+        margin: 50px
+
+    }
+}
+
+/*FIN de responsive TOP HOME...........................................................................................*/
