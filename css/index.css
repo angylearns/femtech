@@ -65,8 +65,6 @@ header .navbar {
     display: block;
     position: static;
     background-color: transparent;
-    padding-top: 30px;
-    ;
 }
 
 header .navbar ul {
@@ -231,17 +229,16 @@ header .navbar.mobile {
     font-style: normal;
     font-weight: 600;
     line-height: 60px;
-    /* 125% */
+    padding-bottom: 30px;
 }
 
 .slogan {
     color: #FFF;
     font-family: Outfit;
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 300;
-    line-height: 60px;
-    /* 325% */
+    line-height: 50px;
 }
 
 .floating-iphones-1 {
@@ -256,6 +253,12 @@ header .navbar.mobile {
 .floating-iphones-1-image {
     max-width: 100%;
     max-height: 100%;
+    margin: 200px 100px 0px 0px;
+}
+
+
+.floating-iphones-1-image:hover {
+    content: url(/img/home/floating-iphones-2\ .png) 
 }
 
 .Reviews-button {
@@ -267,7 +270,7 @@ header .navbar.mobile {
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    margin-left: 120px;
+    margin: 20px 0px 0px 120px ;
     overflow: hidden;
 }
 
@@ -298,12 +301,6 @@ header .navbar.mobile {
 
 /*Bottom page....................................................................................*/
 
-.customer_photos {
-    width: 8.2vh;
-    height: 8.2vh;
-    border-radius: 50%;
-}
-
 #bottom-page {
     position: relative;
     display: flex;
@@ -321,6 +318,7 @@ header .navbar.mobile {
     position: relative;
     display: flex;
     justify-content: space-evenly;
+    
 }
 
 .review {
@@ -329,36 +327,6 @@ header .navbar.mobile {
     flex-shrink: 0;
     border-radius: 50px;
     background: #29ADB2;
-}
-
-.review:hover {
-    transform: translateY(-15px);
-    /* Mueve la reseña hacia arriba */
-}
-
-.user-name {
-    color: #0766AD;
-    font-family: Outfit;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 30px;
-    /* 214.286% */
-}
-
-.five-stars {
-    padding: 0px 0px 15px 45px
-}
-
-.customer-and-name {
-    display: flex;
-    align-items: center;
-    padding: 30px 30px 0px 50px
-}
-
-.customer_photos {
-    margin-right: 20px;
-    margin-bottom: 30px
 }
 
 .reviews-text {
@@ -371,9 +339,42 @@ header .navbar.mobile {
     font-style: normal;
     font-weight: 500;
     line-height: 30px;
-    /* 214.286% */
-
 }
+
+
+.review:hover {
+    transform: translateY(-15px);
+    /* Mueve la reseña hacia arriba */
+}
+
+.customer_photos {
+    width: 8.2vh;
+    height: 8.2vh;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-bottom: 30px
+}
+
+.user-name {
+    color: #0766AD;
+    font-family: Outfit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    /* 214.286% */
+}
+
+.customer-and-name {
+    display: flex;
+    align-items: center;
+    padding: 30px 30px 0px 50px
+}
+
+.five-stars {
+    padding: 0px 0px 15px 45px
+}
+
 
 /* Footer Inicio .....................................................................................*/
 footer {
@@ -388,12 +389,13 @@ footer {
     position: relative;
     bottom: 0;
     padding-right: 100px;
+    padding-left: 50px;
     margin: 180px 89px 0px 89px
 }
 
 footer .copyright {
     width: 75%;
-    margin-left: 50px;
+    
 }
 
 footer .logosRRSS {
@@ -433,6 +435,7 @@ footer .logosRRSS {
     .floating-iphones-1-image {
         max-width: 90%;
         max-height: 90%;
+        margin-top: 0px;
     }
 
     .title {
@@ -636,7 +639,6 @@ footer .logosRRSS {
         /* Ajusta el tamaño para pantallas más pequeñas */
         height: 30px;
     }
-
 }
 
 /*FIN de responsive BOTTOM HOME...........................................................................................*/
