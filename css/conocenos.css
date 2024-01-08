@@ -232,7 +232,7 @@ html {
 
 /* Formatos de TEXTO.........................................................................*/
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 599px) {
     body {
         color: white;
         font-size: 14px;
@@ -255,6 +255,10 @@ html {
     .facebook, .instagram, .twitter{
         width: 30px; /* Ajusta el tamaño para pantallas más pequeñas */
         height: 30px; 
+    }
+
+    footer{
+        gap:2%;
     }
 }
 
@@ -282,6 +286,10 @@ html {
     .facebook, .instagram, .twitter{
         width: 50px; 
         height: 50px; 
+    }
+
+    footer{
+        gap: 30%;
     }
 }
 
@@ -448,28 +456,25 @@ footer {
     background-color: #ffffff;
     border-radius: 50px;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     height: 100px;
     color: #0766AD;
     font-weight: bold;
     /*footer position at the end of the page*/
     position: relative;
     bottom: 0;
-    padding-right: 100px;
-    padding-left: 50px;
 }
 
 footer .copyright {
-    width: 75%;
-    margin-left: 25px;
+   margin-right: 15%;
 }
 
 footer .logosRRSS {
     display: flex;
     justify-content: space-between;
-    text-align: left;
     gap: 10px;
-    margin-left: 150px;
 }
 
 /*footer images hover*/
