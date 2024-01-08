@@ -11,21 +11,34 @@
 
 <body>
 
+    <!-- El header desde acá... -->
     <header>
         <section class="image_logo">
-            <img src="img/logos/logo.png" alt="Logo de FemTech Innovations">
+            <a href="index.html">
+                <img src="img/logos/logo.png" class="logo--desktop" alt="Logo de FemTech Innovations" />
+                <img src="img/logos/logo_sinletras.png" class="logo--mobile" alt="Logo de FemTech Innovations" />
+            </a>
         </section>
-        
-        <section class="navbar">
-            <ul>
-                <li>Home</li>
-                <li>Productos</li>
-                <li>Nosotras</li>
-                <li>Contacta</li>
-            </ul>
+        <input type="checkbox" class="toggle_menu" id="toggle_menu" />
+        <label for="toggle_menu" class="menu_icon">&#9776;</label>
+        <section class="navbar desktop">
+          <ul>
+            <li><a href="index.html" class="hover_underline_animation">Home</a></li>
+            <li><a href="productos.html" class="active_page">Productos</a></li>
+            <li><a href="conocenos.html" class="hover_underline_animation">Nosotras</a></li>
+            <li><a href="formcontacta.html" class="hover_underline_animation">Contacta</a></li>
+          </ul>
+        </section>
+        <section class="navbar mobile">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="productos.html" class="active_page">Productos</a></li>
+            <li><a href="conocenos.html">Nosotras</a></li>
+            <li><a href="formcontacta.html">Contacta</a></li>
+          </ul>
         </section>
     </header>
-
+    <!-- ...hasta acá. -->
     <div id="principal">
 
         <div class="container_azul">
@@ -39,9 +52,9 @@
                 </div>
                 <!--imagen redes sociales-->
                 <div id="contenedorIzquierdoBottom">
-                    <img src="img/contacta/facebook2.svg" alt="Logo_facebook2">
-                    <img src="img/contacta/instagram2.svg" alt="Logo_instagram2">
-                    <img src="img/contacta/twitter2.svg" alt="Logo_twitter2">
+                    <img src="img/contacta/facebook2.svg"  class="Logo_facebook2">
+                    <img src="img/contacta/instagram2.svg"  class="Logo_instagram2">
+                    <img src="img/contacta/twitter2.svg" class="Logo_twitter2">
                 </div>
             </div>
             <div id="contenedorDerecho">
@@ -52,8 +65,9 @@
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                             placeholder="correo electronico">
                     </div>
-                    <textarea name="" id="message" cols="50" rows="10">Escribe tu mensaje aqui...</textarea>
+                    <textarea name="" id="message" cols="50" rows="7">Escribe tu mensaje aqui...</textarea>
                     <br>
+
 <!--imagen redes sociales-->
 <section class="cajita_boton">
                     <button type="submit" class="btn btn-primary botonform">Enviar</button>

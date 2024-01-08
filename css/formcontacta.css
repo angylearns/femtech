@@ -28,6 +28,7 @@ html {
 
 
 
+/* Header desde acá...................... */
 header {
     background-color: #ffffff;
     border-radius: 50px;
@@ -39,31 +40,53 @@ header {
     font-weight: bold;
 }
 
-header .image_logo {
+header .image_logo a {
     height: 92px;
-    pa
-
+    display: flex;
+    align-items: center;
 }
 
-header .image_logo img {
-    max-height: 92px;
+header .image_logo .logo--desktop {
+    border-radius: 50px 0 0 50px;
+    max-height: 80%;
+    width: auto;
+}
+
+header .image_logo .logo--mobile {
+    display: none;
 }
 
 header .navbar {
     width: 30%;
+    display: block;
+    position: static;
+    background-color: transparent;
+    padding: 0;
 }
 
 header .navbar ul {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding-left: 0;
 }
 
 header .navbar ul li {
     list-style: none;
-
 }
 
+header .toggle_menu,
+header .menu_icon {
+    display: none;
+}
 
+header .navbar a {
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 20px;
+}
 #principal {
     padding-top: 100px;
     display: flex;
@@ -95,9 +118,11 @@ header .navbar ul li {
     /* Centra la imagen  */
     color: white;
     /* texto color blanco */
-    padding: 20px;
+    padding: 40px;
     /* Añade espacio interno para el contenido */
     align-items: center;
+    border-radius: 50px;
+    margin-top: 30px;
 }
 
 .botonform {
@@ -107,6 +132,7 @@ header .navbar ul li {
     flex-shrink: 0;
     border-radius: 50px;
     background: #8CECD7;
+
 }
 
 /* para que el boton cambie de color cuando esta el mouse ensima,"hover"*/
@@ -115,21 +141,30 @@ header .navbar ul li {
     justify-content: flex-end;
     border-radius: 70px;
     right: 60px;
+    margin-top: 40px; /* Añade espacio hacia arriba y lo dirige abajo*/
 }
 
 #botonform:hover {
     background-color: blue;
 
 }
-
+.btn btn-primary botonform{
+   /*falta darle valores...................................................................................*/
+}
 #contenedorDerecho {
-
     /* background-color: pink;*/
+   
 }
 
+.form-group{
+
+}
 .form-control,
 #message {
     border-radius: 20px;
+    margin-top: 30px;  /*cajita de bootstrap movimientos*/
+    border: 2px solid #8CECD7;
+  
 }
 
 footer {
@@ -144,6 +179,7 @@ footer {
     position: relative;
     bottom: 0;
     padding-right: 300px;
+    
 }
 
 footer .copyright {
@@ -164,7 +200,18 @@ footer .logocontacta {
 .twitter,
 .instagram {
     width: 50px;
-    height: 50px;
+    height: 50px; 
+}
+.Logo_facebook2{
+    margin-top: 60px;
+}
+
+.Logo_instagram2{
+    margin-top: 60px;
+}
+
+.Logo_twitter2{
+    margin-top: 60px;
 }
 
 /*default values*/
@@ -181,16 +228,95 @@ footer .logocontacta {
 }
 
 /*footer images hover*/
-.facebook:hover {
+.facebook2:hover {
     background-image: url("../img/contacta/facebook.svg");
 }
 
-.twitter:hover {
+.twitter2:hover {
     background-image: url("../img/contacta/twitter.svg");
 }
 
-.instagram:hover {
+.instagram2:hover {
     background-image: url("../img/contacta/instagram.svg");
 }
+header .toggle_menu,
+header .menu_icon {
+    display: none;
+}
+header .toggle_menu:checked~.navbar.mobile {
+    background-color: #145659;
+    border-radius: 50px;
+    display: block;
+    position: absolute;
+    top: 115px;
+    right: 50px;
+    height: 200px;
+    min-width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .toggle_menu:checked~.navbar.mobile ul {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    margin: 0;
+    height: 70%;
+    min-width: auto;
+}
+header .toggle_menu:checked~.navbar.mobile ul li a {
+    color: #8CECD7;
+    font-weight: 500;
+}
+header .navbar.desktop .hover_underline_animation {
+    display: inline-block;
+    position: relative;
+    color: #0766AD;
+}
 
-/* end footer ....
+header .navbar.desktop .hover_underline_animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0766AD;
+    transform-origin: bottom right;
+    transition: transform 0.35s ease-out;
+}
+   
+header .navbar.desktop .hover_underline_animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+/* Active Page */
+header .navbar.desktop .active_page {
+    text-decoration: underline #EE7214;
+    text-decoration-thickness: 2px;
+}
+
+header .navbar.desktop .active_page:hover {
+    text-decoration: underline #0766AD;
+    text-decoration-thickness: 2px;
+}
+
+/* end footer ....*/
+@media screen and (max-width:430px){
+    header .image_logo .logo--desktop,
+    header .navbar.desktop {
+        display: none;
+    }
+
+    header .image_logo .logo--mobile {
+        display: block;
+        border-radius: 50px;
+        max-height: 80%;
+    }
+}
+header .navbar.mobile .active_page {
+    text-decoration: underline #8CECD7;
+    text-decoration-thickness: 1.5px;
+}
+}
