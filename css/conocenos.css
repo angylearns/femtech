@@ -115,6 +115,7 @@ header .navbar a:visited {
 header .navbar.desktop .active_page {
     text-decoration: underline #EE7214;
     text-decoration-thickness: 2px;
+    color:#0766AD !important;
 }
 
 header .navbar.desktop .active_page:hover {
