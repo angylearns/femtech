@@ -41,7 +41,7 @@ header {
     font-weight: bold;
     margin-right: 89px;
     margin-left: 89px;
-    margin-top: -50px;
+    margin-top: 0.005%;
 }
 
 header .image_logo a {
@@ -247,7 +247,6 @@ header .navbar.mobile {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0;
 }
 
 .floating-iphones-1-image {
@@ -258,7 +257,7 @@ header .navbar.mobile {
 
 
 .floating-iphones-1-image:hover {
-    content: url(/img/home/floating-iphones-2\ .png) 
+    content: url(/img/home/floating-iphones-2\ .png)
 }
 
 .Reviews-button {
@@ -270,7 +269,7 @@ header .navbar.mobile {
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    margin: 20px 0px 0px 120px ;
+    margin: 20px 0px 0px 120px;
     overflow: hidden;
 }
 
@@ -288,10 +287,10 @@ header .navbar.mobile {
 .Reviews-button:hover {
     background-color: #F7B787;
     cursor: pointer;
-    color:#EE7214;
+    color: #EE7214;
 }
 
-.Reviews-button:hover > a.reviews-button-text {
+.Reviews-button:hover>a.reviews-button-text {
     color: #EE7214;
 }
 
@@ -318,7 +317,7 @@ header .navbar.mobile {
     position: relative;
     display: flex;
     justify-content: space-evenly;
-    
+
 }
 
 .review {
@@ -395,7 +394,7 @@ footer {
 
 footer .copyright {
     width: 75%;
-    
+
 }
 
 footer .logosRRSS {
@@ -403,7 +402,7 @@ footer .logosRRSS {
     justify-content: space-between;
     text-align: left;
     gap: 10px;
-    
+
 }
 
 /*footer images hover*/
@@ -425,29 +424,13 @@ footer .logosRRSS {
 
 
 /*Responsive TOP HOME...........................................................................................*/
-@media screen and (max-width: 1290px) {
-    .home_main_top-page {
-        flex-direction: column;
-        /* Cambiar a columna en móvil */
-
-    }
-
-    .floating-iphones-1-image {
-        max-width: 90%;
-        max-height: 90%;
-        margin-top: 0px;
-    }
-
-    .title {
-        font-size: 60px;
-    }
-
-    .slogan {
-        font-size: 18px;
-    }
-}
 
 @media screen and (max-width: 900px) {
+
+    .header {
+        margin-top: 200px
+    }
+
     .home_main_top-page {
         flex-direction: column;
         /* Cambiar a columna en móvil */
@@ -457,6 +440,15 @@ footer .logosRRSS {
     .floating-iphones-1-image {
         max-width: 80%;
         max-height: 80%;
+        margin: 0px;
+    }
+
+    .left-home_main_top-page {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px 80px;
     }
 
     .title {
@@ -464,21 +456,16 @@ footer .logosRRSS {
     }
 
     .slogan {
-        font-size: 14px;
+        display: none;
     }
+
 }
 
-
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 580px) {
     .home_main_top-page {
         flex-direction: column;
         /* Cambiar a columna en móvil */
 
-    }
-
-    .floating-iphones-1-image {
-        max-width: 60%;
-        max-height: 60%;
     }
 
     .title {
@@ -489,16 +476,6 @@ footer .logosRRSS {
         display: none;
     }
 
-    .Reviews-button {
-        width: 174px;
-        height: 54px;
-        flex-shrink: 0;
-        border-radius: 30px;
-        background: #8CECD7;
-    }
-}
-
-@media screen and (max-width:580px) {
     .Reviews-button {
         width: 174px;
         height: 54px;
@@ -525,13 +502,11 @@ footer .logosRRSS {
 
     }
 
-    .floating-iphones-1{
+    .floating-iphones-1 {
         width: 100%;
     }
 
-    .floating-iphones-1-image{
-       
-    }
+    .floating-iphones-1-image {}
 
     header {
         margin-left: 35px;
@@ -585,9 +560,9 @@ footer .logosRRSS {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height:auto;
+        height: auto;
         margin-top: 200px;
-       /* margin-top: 800px; /* No se por qué las reseñas se montan encima de la parte superior de la pantalla, así que he tenido que meter este margen tan grande */   
+        /* margin-top: 800px; /* No se por qué las reseñas se montan encima de la parte superior de la pantalla, así que he tenido que meter este margen tan grande */
     }
 
     #bottom-page {
@@ -598,7 +573,7 @@ footer .logosRRSS {
         background-size: cover;
         height: auto;
         width: 100%;
-    
+
     }
 
     .review {
@@ -613,7 +588,6 @@ footer .logosRRSS {
 
     .five-stars {
         padding: 0px 0px 15px 45px;
-    
         margin-top: -15px;
     }
 
@@ -635,10 +609,15 @@ footer .logosRRSS {
     .facebook,
     .instagram,
     .twitter {
-        width: 30px;
+        width: 25px;
         /* Ajusta el tamaño para pantallas más pequeñas */
-        height: 30px;
+        height: 25px;
+    }
+
+    footer {
+        flex-direction: column;
     }
 }
+
 
 /*FIN de responsive BOTTOM HOME...........................................................................................*/
