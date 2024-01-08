@@ -130,7 +130,7 @@ header .navbar.mobile {
     display: none;
 }
 
-@media screen and (max-width:420px) {
+@media screen and (max-width:430px) {
     body {
         padding: 40px 30px;
     }
@@ -230,7 +230,7 @@ html {
 }
 
 
-/* Formatos de TEXTO.........................................................................*/
+/* ........................................................................*/
 
 @media screen and (max-width: 599px) {
     body {
@@ -381,7 +381,7 @@ header .navbar.mobile {
 }
 
 
-@media screen and (max-width:420px) {
+@media screen and (max-width:430px) {
     body {
         padding: 40px 30px;
     }
