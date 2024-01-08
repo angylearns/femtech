@@ -268,7 +268,6 @@ header .navbar.mobile {
     align-items: center;
     flex-shrink: 0;
     margin-left: 120px;
-    padding-top: 10px;
     overflow: hidden;
 }
 
@@ -285,6 +284,11 @@ header .navbar.mobile {
 
 .Reviews-button:hover {
     background-color: #F7B787;
+    cursor: pointer;
+    color:#EE7214;
+}
+
+.Reviews-button:hover > a.reviews-button-text {
     color: #EE7214;
 }
 
@@ -383,13 +387,13 @@ footer {
     /*footer position at the end of the page*/
     position: relative;
     bottom: 0;
-    padding-right: 300px;
-    margin: 70px 40px 0px 40px
+    padding-right: 100px;
+    margin: 180px 89px 0px 89px
 }
 
 footer .copyright {
     width: 75%;
-    margin-left: 25px;
+    margin-left: 50px;
 }
 
 footer .logosRRSS {
@@ -397,7 +401,7 @@ footer .logosRRSS {
     justify-content: space-between;
     text-align: left;
     gap: 10px;
-    margin-left: 150px;
+    
 }
 
 /*footer images hover*/
@@ -518,6 +522,14 @@ footer .logosRRSS {
 
     }
 
+    .floating-iphones-1{
+        width: 100%;
+    }
+
+    .floating-iphones-1-image{
+       
+    }
+
     header {
         margin-left: 35px;
         margin-right: 35px;
@@ -563,15 +575,16 @@ footer .logosRRSS {
 @media screen and (max-width: 430px) {
     .bottom {
         height: auto;
-        width: 100vh;
+        width: 100%;
     }
 
     .main_bottom-page_home {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 800px;
-        
+        height:auto;
+        margin-top: 200px;
+       /* margin-top: 800px; /* No se por qué las reseñas se montan encima de la parte superior de la pantalla, así que he tenido que meter este margen tan grande */   
     }
 
     #bottom-page {
@@ -580,6 +593,9 @@ footer .logosRRSS {
         display: flex;
         justify-content: center;
         background-size: cover;
+        height: auto;
+        width: 100%;
+    
     }
 
     .review {
@@ -621,13 +637,6 @@ footer .logosRRSS {
         height: 30px;
     }
 
-    .facebook,
-    .instagram,
-    .twitter {
-        width: 50px;
-        /* Ajusta el tamaño para pantallas más pequeñas */
-        height: 50px;
-    }
 }
 
-/*FIN de responsive TOP HOME...........................................................................................*/
+/*FIN de responsive BOTTOM HOME...........................................................................................*/
