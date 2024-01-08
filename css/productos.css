@@ -431,6 +431,13 @@ main h1,
     main .items .item:hover {
         transform: none;
     }
+
+    footer .logosRRSS .facebook,
+    footer .logosRRSS .instagram,
+    footer .logosRRSS .twitter {
+        width: 30px;
+        height: 30px; 
+    }
 }
 
 footer {
@@ -444,7 +451,8 @@ footer {
     /*footer position at the end of the page*/
     position: relative;
     bottom: 0;
-    padding-right: 300px;
+    padding-right: 100px;
+    padding-left: 50px;
 }
 
 footer .copyright {
