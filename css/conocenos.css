@@ -453,7 +453,8 @@ footer {
     /*footer position at the end of the page*/
     position: relative;
     bottom: 0;
-    padding-right: 300px;
+    padding-right: 100px;
+    padding-left: 50px;
 }
 
 footer .copyright {
@@ -620,54 +621,62 @@ footer .logosRRSS {
 
 
 /*efecto en la foto de quienes somos*/
-.card {
+.card1 {
     width:fit-content;
     height: auto;
     transition: all 0.2s;
     position: relative;
     cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
   
-  .card-inner {
-    width: inherit;
+  .card-inner1 {
+    width: 60%;
     height: inherit;
     box-shadow: 0 0 10px #f7b887;
     backdrop-filter: blur(10px);
-    border-radius: 8px;
+    border-radius: 28px;
   }
   
-  .card:hover {
+  .card1:hover {
     transform: scale(1.04) rotate(1deg);
   }
+
+  #imagen1{
+    width:100%; 
+    border-radius: 28px;
+  }
   
-  .circle {
-    width: 80px;
-    height: 80px;
+  .circle1 {
+    width: 10%;
+    height: 20%;
     background: radial-gradient(#0766AD, #29ADB2);
     border-radius: 50%;
     position: absolute;
     animation: move-up6 1.5s ease-in infinite alternate-reverse;
   }
   
-  .circle:nth-child(1) {
-    top: -30px;
-    left: -30px;
+  .circle1:nth-child(1) {
+    top: 5%;
+    left: 15%;
   }
   
-  .circle:nth-child(2) {
-    bottom: -20px;
-    right: -20px;
+  .circle1:nth-child(2) {
+    bottom: -5%;
+    right: 15%;
     animation-name: move-down1;
   }
   
   @keyframes move-up6 {
     to {
-      transform: translateX(-30px);
+      transform: translateX(-25%);
     }
   }
   
   @keyframes move-down1 {
     to {
-      transform: translateX(30px);
+      transform: translateX(25%);
     }
   }
