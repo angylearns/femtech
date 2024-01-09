@@ -444,6 +444,12 @@ header .navbar.desktop .active_page:hover {
         border-radius: 50px;
         max-height: 80%;
     }
+
+    .container_azul{
+        flex-direction: row;
+        
+    }
+
 }
 
 header .navbar.mobile .active_page {
