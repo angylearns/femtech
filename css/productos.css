@@ -189,9 +189,13 @@ header .navbar.mobile {
         text-decoration: underline #8CECD7;
         text-decoration-thickness: 1.5px;
     }
-}
 /* .........................hasta acá. */
 
+    footer{
+        gap:2%;
+    }
+
+}
 main {
     color: #ffffff;
     display: flex;
@@ -434,7 +438,7 @@ main h1,
 
     footer .logosRRSS .facebook,
     footer .logosRRSS .instagram,
-    footer .logosRRSS .twitter {
+    footer .logosRRSS .twitter{
         width: 30px;
         height: 30px; 
     }
@@ -444,33 +448,41 @@ footer {
     background-color: #ffffff;
     border-radius: 50px;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     height: 100px;
     color: #0766AD;
     font-weight: bold;
-    /*footer position at the end of the page*/
     position: relative;
     bottom: 0;
-    padding-right: 100px;
-    padding-left: 50px;
+    gap: 30%;
+}
+
+@media screen and (max-width: 768px) {
+    footer {
+        gap: 10%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    footer {
+        gap: 0;
+    }
 }
 
 footer .copyright {
-    width: 75%;
-    margin-left: 25px;
+   margin-right: 15%;
 }
 
 footer .logosRRSS {
     display: flex;
     justify-content: space-between;
-    text-align: left;
     gap: 10px;
-    margin-left: 150px;
 }
 
 /*footer images hover*/
 .facebook:hover {
-   
     content: url("/img/rrss/facebook2.svg");
 }
 
