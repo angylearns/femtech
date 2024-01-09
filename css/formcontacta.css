@@ -215,10 +215,13 @@ header .navbar.mobile {
 }
 
 .container_azul {
-    padding: 60px;
+    padding-top: 1.5%;
+    padding-left: 2.5%;
+    padding-bottom: 1.5%;
     background: #0766AD;
     display: flex;
-    width: 1100px;
+    /* width: 1100px; */
+    width: 50%;
     gap: 9%;
     border-radius: 30px;
 }
@@ -227,14 +230,16 @@ header .navbar.mobile {
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-
+    width: 35%;
 }
+
+
 
 #contenedorIzquierdoTop {
     position: relative;
     color: white;
     /* texto color blanco */
-    padding: 40px;
+    /* padding: 1%; */
     /* Añade espacio interno para el contenido */
     align-items: center;
     border-radius: 50px;
@@ -250,6 +255,7 @@ header .navbar.mobile {
 .imagen_fondo {
     position: absolute;
     height: 100%;
+    width: 100%;
     z-index: -1;
     opacity: 0.5;
     /* Ajusta este valor para cambiar la transparencia */
@@ -281,13 +287,14 @@ header .navbar.mobile {
 
 }
 
-.form-control,
+.form-control, 
 #message {
     border-radius: 20px;
     margin-top: 30px;
     /*cajita de bootstrap movimientos*/
     border: 2px solid #8CECD7;
-}
+    width: 100%;
+} 
 
 footer {
     background-color: #ffffff;
@@ -352,15 +359,15 @@ footer .logocontacta {
 
 /*footer images hover*/
 .Logo_facebook2:hover {
-    content: url(/img/contacta/facebook.svg);
+    content: url(../img/contacta/facebook.svg);
 }
 
 .Logo_twitter2:hover {
-    content: url(/img/contacta/twitter.svg);
+    content: url(../img/contacta/twitter.svg);
 }
 
 .Logo_instagram2:hover {
-    content: url(/img/contacta/instagram.svg);
+    content: url(../img/contacta/instagram.svg);
 }
 
 header .toggle_menu,
@@ -431,6 +438,13 @@ header .navbar.desktop .active_page:hover {
     text-decoration-thickness: 2px;
 }
 
+#titulo_contacto{
+    /* width: 100%; */
+    background-color: red;
+    font-size: 2em;
+}
+
+
 /* end footer ....*/
 @media screen and (max-width:430px) {
 
@@ -446,8 +460,14 @@ header .navbar.desktop .active_page:hover {
     }
 
     .container_azul{
-        flex-direction: row;
+        display: flex;
+        flex-direction: column;
+       
+    }
+    #titulo_contacto{
         
+        background-color: rgb(100, 15, 204);
+        font-size: 1.1em;
     }
 
 }
@@ -456,3 +476,17 @@ header .navbar.mobile .active_page {
     text-decoration: underline #8CECD7;
     text-decoration-thickness: 1.5px;
 }
+
+ #formulario{
+  
+    width: 100%;
+} 
+
+
+
+#contenedorDerecho {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
