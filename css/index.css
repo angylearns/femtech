@@ -219,8 +219,7 @@ header .navbar.mobile {
 }
 
 .left-home_main_top-page {
-    padding-left: 212px;
-    padding-top: 100px;
+    padding: 100px 200px 0px 300px
 }
 
 .title {
@@ -242,7 +241,6 @@ header .navbar.mobile {
 }
 
 .floating-iphones-1 {
-    width: 86.7vh;
     height: 60vh;
     display: flex;
     justify-content: center;
@@ -427,6 +425,9 @@ footer .logosRRSS {
 
 @media screen and (max-width: 900px) {
 
+    .top{
+        justify-content: space-around;
+    }
     .header {
         margin-top: 200px
     }
@@ -436,10 +437,12 @@ footer .logosRRSS {
         /* Cambiar a columna en móvil */
 
     }
+   
+    .floating-iphones-1{
+        height:auto;
+    }
 
     .floating-iphones-1-image {
-        max-width: 80%;
-        max-height: 80%;
         margin: 0px;
     }
 
@@ -448,7 +451,7 @@ footer .logosRRSS {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 10px 80px;
+        padding: 0vh 10vh
     }
 
     .title {
@@ -465,7 +468,13 @@ footer .logosRRSS {
     .home_main_top-page {
         flex-direction: column;
         /* Cambiar a columna en móvil */
+    }
 
+    .left-home_main_top-page{
+        padding: 0vh 10vh
+    }
+    .floating-iphones-1{
+        height:auto;
     }
 
     .title {
@@ -506,7 +515,9 @@ footer .logosRRSS {
         width: 100%;
     }
 
-    .floating-iphones-1-image {}
+    .floating-iphones-1-image {
+        padding-bottom: 40px
+    }
 
     header {
         margin-left: 35px;
@@ -522,7 +533,7 @@ footer .logosRRSS {
         align-items: center;
         flex-shrink: 0;
         font-size: 40px;
-        padding: 150px 0px 0px 0px;
+        padding: 0px 0px 50px 0px;
     }
 
     .title {
@@ -542,7 +553,7 @@ footer .logosRRSS {
         border-radius: 30px;
         background: #8CECD7;
         position: absolute;
-        top: 800px;
+        top: 780px;
         left: 8px;
     }
 }
@@ -550,6 +561,26 @@ footer .logosRRSS {
 /*FIN de responsive TOP HOME...........................................................................................*/
 
 /*Responsive BOTTOM HOME...........................................................................................*/
+
+@media screen and (max-width: 900px) {
+    .main_bottom-page_home{
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    footer .logosRRSS .facebook,
+    footer .logosRRSS .instagram,
+    footer .logosRRSS .twitter {
+        width: 30px;
+        height: 30px; 
+        
+    }
+    footer {
+        gap: 2%;
+    }
+}
+
 @media screen and (max-width: 430px) {
     .bottom {
         height: auto;
@@ -606,16 +637,17 @@ footer .logosRRSS {
         margin-top: 0px;
     }
 
-    .facebook,
-    .instagram,
-    .twitter {
-        width: 25px;
-        /* Ajusta el tamaño para pantallas más pequeñas */
-        height: 25px;
-    }
 
+    footer .logosRRSS .facebook,
+    footer .logosRRSS .instagram,
+    footer .logosRRSS .twitter {
+        width: 30px;
+        height: 30px; 
+        
+    }
     footer {
-        flex-direction: column;
+        gap: 20%;
+        margin: 20px 50px 50px 50px;
     }
 }
 
