@@ -16,7 +16,7 @@ Este proyecto es el primer trabajo (12/2023 - 01/2024) del Bootcamp Full Stack F
 
 ## Estado del Proyecto
 
-El proyecto está en fase de desarrollo.
+El proyecto está en fase de producción.
 
 ## Tecnologías Utilizadas
 
