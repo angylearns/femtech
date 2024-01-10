@@ -8,7 +8,7 @@
 
 #home_body {
     height: 100vh;
-    width:
+    width: 100%;
 }
 
 .home {
@@ -549,6 +549,8 @@ footer .logosRRSS {
         display: flex;
         text-align: center;
         font-size: 40px;
+        line-height: 45px;
+        padding: 0;
     }
 
     .slogan {
@@ -656,7 +658,7 @@ footer .logosRRSS {
     }
     footer {
         gap: 20%;
-        margin: 20px 50px 50px 50px;
+        margin: -20px 50px 50px 50px;
     }
 }
 
