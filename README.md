@@ -2,7 +2,7 @@
 # https://angylearns.github.io/femtech_g3/
 ## Grupo 3
 
-![Logo](/img/logos/logo.png)
+![Femtech Innovations](https://github.com/user-attachments/assets/517f7c07-8bf6-436c-bde2-283fae9b2bfd)
 
 ## Descripción del Proyecto
 
